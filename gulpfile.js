@@ -24,3 +24,5 @@ gulp.task('css', function () {
 gulp.task('watch', function () {
   gulp.watch(['./css/*.css', './css/**/*.css'], ['css']);
 });
+
+gulp.task('build', ['css']);
