@@ -1,0 +1,28 @@
+{
+  "name": "shop-theme",
+  "version": "1.0.0",
+  "description": "Shop theme made for an exam project. Not meant to be used in production.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rediche/shop-theme.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rediche/shop-theme/issues"
+  },
+  "homepage": "https://github.com/rediche/shop-theme#readme",
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-partial-import": "^4.1.0",
+    "precss": "^2.0.0"
+  }
+}
