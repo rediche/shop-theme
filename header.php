@@ -10,7 +10,7 @@
 <body>
 
 <header class="header">
-  <p>Page title</p>
+  <p>Page <span>title</span></p>
   <nav class="menu main">
     <a href="#">Test</a>
   </nav>

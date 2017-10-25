@@ -1,3 +1,13 @@
+/* Utilities */
 @import "utilities/reset";
+@import "utilities/settings";
 
-h1 { background-color: black; }
+/* Elements */
+
+/* Components */
+
+/* Partials */
+@import "partials/header";
+@import "partials/footer";
+
+/* Pages */

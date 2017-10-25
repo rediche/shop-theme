@@ -1,0 +1,6 @@
+/* Put CSS custom properties inside this.
+Example: --custom-property: 10px; defined a custom property with the value 10px.
+This property can then be used as: var(--custom-property) and will be resolved to be 10px in the browser. */
+:root {
+  
+}

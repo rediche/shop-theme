@@ -2,18 +2,16 @@ var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var cssnext = require('postcss-cssnext');
-var precss = require('precss');
 var cssnano = require('cssnano');
 var partialImport = require('postcss-partial-import');
 
 gulp.task('css', function () {
   var processors = [
-    partialImport,
-    cssnext({
-      warnForDuplicates: false
-    }),
-    precss,
-    cssnano
+    partialImport(),
+    cssnext(),
+    cssnano({
+      autoprefixer: false
+    })
   ];
 
   return gulp.src('./css/style.css')

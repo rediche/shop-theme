@@ -22,7 +22,6 @@
     "gulp-postcss": "^7.0.0",
     "gulp-sourcemaps": "^2.6.1",
     "postcss-cssnext": "^3.0.2",
-    "postcss-partial-import": "^4.1.0",
-    "precss": "^2.0.0"
+    "postcss-partial-import": "^4.1.0"
   }
 }
