@@ -20,7 +20,7 @@ gulp.task('css', function () {
     .pipe( sourcemaps.init() )
     .pipe( postcss(processors) )
     .pipe( sourcemaps.write('.') )
-    .pipe( gulp.dest('./') );
+    .pipe( gulp.dest('./build/') );
 });
 
 gulp.task('watch', function () {
