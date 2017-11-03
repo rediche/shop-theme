@@ -17,3 +17,5 @@ Shop theme made for an exam project. Not meant to be used in production.
 # Watch
 
 `gulp watch`
+
+This is a test branch
