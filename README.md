@@ -17,5 +17,3 @@ Shop theme made for an exam project. Not meant to be used in production.
 # Watch
 
 `gulp watch`
-
-Hej fra Mads
