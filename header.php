@@ -11,9 +11,12 @@
 
 <header class="header">
   <p>Page <span>title</span></p>
+  <br>
   <nav class="menu main">
-    <a href="#">Test</a>
+    <a class="menu__item" href="#">Test</a>
+    <a class="menu__item" href="#">Test</a>
   </nav>
+  <br>
 </header>
 
 <button class="button">Test button</button><br>
