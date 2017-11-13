@@ -1,0 +1,23 @@
+.input {
+  display: inline-flex;
+  background-color: var(--white);
+  height: 2.25rem;
+  border-radius: .125rem;
+  border: 1px solid color(var(--dark-grey) alpha(-62%));
+  padding: 0 1rem;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: color(var(--dark-grey) alpha(-46%));
+}
+
+.input--raised {
+  border: none;
+  box-shadow: var(--shadow-1dp);
+}
+
+.input--raised:focus {
+  box-shadow: var(--shadow-2dp);
+}

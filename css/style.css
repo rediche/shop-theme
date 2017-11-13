@@ -1,9 +1,10 @@
 /* Utilities */
-@import "utilities/reset";
 @import "utilities/settings";
+@import "utilities/reset";
 
 /* Elements */
 @import "elements/button";
+@import "elements/input";
 
 /* Components */
 

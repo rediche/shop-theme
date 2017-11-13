@@ -1,5 +1,6 @@
 .button {
   display: inline-flex;
+  background-color: transparent;
   padding: 0 1rem;
   align-items: center;
   justify-content: center;
@@ -12,23 +13,24 @@
 }
 
 .button:focus {
-  background-color: var(--primary-focus-color);
+  outline: none;
+  background-color: var(--light-grey);
 }
 
 .button[disabled] {
-  color: color(var(--primary-text-color) alpha(-62%));
+  color: color(var(--dark-grey) alpha(-62%));
 }
 
 .button--raised {
-  background-color: var(--primary-color);
-  box-shadow: var(--primary-shadow);
+  background-color: var(--orange);
+  box-shadow: var(--shadow-1dp);
 }
 
 .button--raised:focus {
-  background-color: color(var(--primary-color) blackness(10%));
+  background-color: color(var(--orange) blackness(10%));
 }
 
 .button--raised[disabled] {
-  background-color: var(--primary-focus-color);
+  background-color: var(--light-grey);
   box-shadow: none;
 }

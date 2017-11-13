@@ -18,3 +18,6 @@
 
 <button class="button">Test button</button><br>
 <button class="button button--raised">Test button</button><br>
+
+<input class="input" placeholder="Placeholder"><br>
+<input class="input input--raised" placeholder="Placeholder"><br>
