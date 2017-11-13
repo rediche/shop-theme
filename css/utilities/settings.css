@@ -4,6 +4,7 @@ This property can then be used as: var(--custom-property) and will be resolved t
 :root {
   --orange: #FF9800;
   --dark-grey: #263238;
+  --medium-grey: #546E7A;
   --lighter-grey: #FAFAFA;
   --light-grey: #E7E7E7;
   --white: #FFFFFF;

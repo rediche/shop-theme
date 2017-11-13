@@ -1,0 +1,9 @@
+.mega-menu {
+  background-color: var(--medium-grey);
+}
+
+.mega-menu__list {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
