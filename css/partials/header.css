@@ -1,0 +1,29 @@
+.header {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+.top-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 1.5rem;
+  padding: 0 1rem;
+}
+
+.top-header__link {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: .675rem;
+}
+
+.middle-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  padding: 0 1rem;
+}
+
+.middle-header__logo {}
