@@ -8,6 +8,7 @@
 @import "blocks/input";
 @import "blocks/menu";
 @import "blocks/mega-menu";
+@import "blocks/card";
 
 /* Components */
 
@@ -16,3 +17,4 @@
 @import "partials/footer";
 
 /* Pages */
+@import "pages/front-page";
