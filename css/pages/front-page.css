@@ -1,5 +1,5 @@
 .front-page {
-  margin: 2rem 0;
+  margin: 1rem 0 0;
 }
 
 .category-entry {
@@ -7,6 +7,7 @@
   display: block;
   position: relative;
   background-color: var(--dark-grey);
+  margin-bottom: 1rem;
 }
 
 .category-entry__inner {
@@ -27,4 +28,10 @@
   border-radius: .125rem;
   background-size: cover;
   background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .front-page {
+    margin: 2rem 0;
+  }
 }

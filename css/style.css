@@ -9,8 +9,8 @@
 @import "blocks/menu";
 @import "blocks/mega-menu";
 @import "blocks/card";
-
-/* Components */
+@import "blocks/product-card";
+@import "blocks/product-section";
 
 /* Partials */
 @import "partials/header";
