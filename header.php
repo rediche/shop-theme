@@ -20,15 +20,6 @@
     ));
     ?>
 
-    <!-- <div class="row">
-      
-      <nav class="top-header col">
-        <a href="#" class="top-header__link">Top Link 1</a>
-        <a href="#" class="top-header__link">Top Link 2</a>
-        <a href="#" class="top-header__link">Top Link 3</a>
-      </nav>
-    </div> -->
-
     <div class="row">
       <div class="middle-header col">
         <button class="middle-header__menu-toggle">

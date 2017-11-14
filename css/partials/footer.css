@@ -1,0 +1,26 @@
+.footer {
+  background-color: var(--dark-grey);
+  color: var(--white);
+  padding: 2rem 0;
+}
+
+.footer__logo {
+  max-width: 150px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer__about {
+  font-size: .85rem;
+  font-weight: 100;
+  line-height: 1.25;
+}
+
+.footer__about a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.footer__about a:hover {
+  text-decoration: underline;
+}
