@@ -10,7 +10,8 @@ gulp.task('css', function () {
     partialImport(),
     cssnext(),
     cssnano({
-      autoprefixer: false
+      autoprefixer: false,
+      zindex: false
     })
   ];
 
