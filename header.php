@@ -29,7 +29,7 @@
         </button>
 
         <div class="middle-header__logo">
-          <!-- <img src="https://placehold.it/100x50" alt="Logo"> -->
+          <img src="<?php echo get_template_directory_uri() ?>/images/holtehobby-logo.svg" alt="Logo">
         </div>
 
         <div class="middle-header__search">
@@ -53,7 +53,7 @@
   </div>
 </header>
 
-<nav class="mega-menu mega-menu--open">
+<nav class="mega-menu">
   <div class="container">
     <div class="row">
 
