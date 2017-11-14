@@ -10,11 +10,14 @@
   height: 1.5rem;
 }
 
-.top-header__link {
-  color: var(--white);
-  text-decoration: none;
+.top-header .menu-item {
   margin-left: 1rem;
   font-size: .675rem;
+}
+
+.top-header .menu-item a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .middle-header {

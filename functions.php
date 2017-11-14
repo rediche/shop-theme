@@ -6,9 +6,10 @@ function setup_styles_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'setup_styles_and_scripts' );
 
-function register_my_menu() {
+function register_my_menus() {
   register_nav_menu( 'mega-menu', __( 'Primær Menu', 'holte-hobby' ) );
+  register_nav_menu( 'top-menu', __( 'Top Menu', 'holte-hobby' ) );
 }
-add_action( 'after_setup_theme', 'register_my_menu' );
+add_action( 'after_setup_theme', 'register_my_menus' );
 
 ?>

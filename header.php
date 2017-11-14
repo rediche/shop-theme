@@ -12,13 +12,22 @@
 <header class="header">
   <div class="container">
 
-    <div class="row">
+    <?php 
+    wp_nav_menu( array(
+      'theme_location' => 'top-menu',
+      'menu_class' => 'top-header col',
+      'container_class' => 'row'
+    ));
+    ?>
+
+    <!-- <div class="row">
+      
       <nav class="top-header col">
         <a href="#" class="top-header__link">Top Link 1</a>
         <a href="#" class="top-header__link">Top Link 2</a>
         <a href="#" class="top-header__link">Top Link 3</a>
       </nav>
-    </div>
+    </div> -->
 
     <div class="row">
       <div class="middle-header col">
@@ -62,7 +71,7 @@
     </div>
     <?php 
     wp_nav_menu( array(
-      'theme-location' => 'mega-menu',
+      'theme_location' => 'mega-menu',
       'menu_class' => 'mega-menu__list col',
       'container_class' => 'row'
     ));
