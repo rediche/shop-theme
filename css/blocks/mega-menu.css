@@ -78,6 +78,7 @@
 
   .mega-menu__list .menu-item > .sub-menu {
     position: absolute;
+    z-index: 1;
     top: 3rem;
     left: 0;
     background-color: var(--white);

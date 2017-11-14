@@ -8,8 +8,16 @@
         Tlf.: <a href="tel:+4545420113">+45 45 42 01 13</a><br>
         <a href="mailto:info@holte-modelhobby.dk">info@holte-modelhobby.dk</a></p>
       </div>
-      <div class="col"></div>
-      <div class="col"></div>
+      <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+        <div class="col" role="complementary">
+          <?php dynamic_sidebar( 'footer-1' ); ?>
+        </div>
+      <?php endif; ?>
+      <?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+        <div class="col" role="complementary">
+          <?php dynamic_sidebar( 'footer-2' ); ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>

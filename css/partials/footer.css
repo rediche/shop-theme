@@ -24,3 +24,23 @@
 .footer__about a:hover {
   text-decoration: underline;
 }
+
+.footer__widget {
+  font-weight: 100;
+}
+
+.footer__widget .widgettitle {
+  margin-bottom: .5rem;
+}
+
+.footer__widget .menu-item a {
+  color: var(--white);
+  padding: .125rem 0;
+  display: inline-block;
+  font-size: .85rem;
+  text-decoration: none;
+}
+
+.footer__widget .menu-item a:hover {
+  text-decoration: underline;
+}

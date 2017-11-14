@@ -1,4 +1,4 @@
-.menu {
+/* .menu {
   background-color: var(--white);
   padding: .5rem 0;
   display: flex;
@@ -19,4 +19,4 @@
 .menu__item:active,
 .menu__item--active {
   background-color: var(--lighter-grey);
-}
+} */
