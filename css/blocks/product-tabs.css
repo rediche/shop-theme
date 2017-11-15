@@ -1,0 +1,29 @@
+.product-tabs {}
+
+.product-tabs__list {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.product-tabs__tab {
+  flex: 1 0 auto;
+}
+
+.product-tabs__tab-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 100%;
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.product-tabs__entry {
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+/* .product-tabs__tab.active .product-tabs__tab-link {
+  background-color: var(--dark-grey);
+} */
