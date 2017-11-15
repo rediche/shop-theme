@@ -3,3 +3,9 @@
   border-radius: .125rem;
   box-shadow: var(--shadow-2dp);
 }
+
+.card img:only-child {
+  border-radius: .125rem;
+  width: 100%;
+  height: auto;
+}

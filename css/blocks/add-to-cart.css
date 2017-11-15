@@ -1,0 +1,9 @@
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.add-to-cart__quantity-input {
+  margin-right: 1rem;
+}

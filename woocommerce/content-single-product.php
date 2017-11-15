@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-sm-12 col-md-6">
       <?php
         /**
          * woocommerce_before_single_product_summary hook.
@@ -47,11 +47,12 @@ if ( ! defined( 'ABSPATH' ) ) {
          * @hooked woocommerce_show_product_sale_flash - 10
          * @hooked woocommerce_show_product_images - 20
          */
-        do_action( 'woocommerce_before_single_product_summary' );
+        //do_action( 'woocommerce_before_single_product_summary' );
+        woocommerce_show_product_images();
       ?>
       </div>
   
-      <div class="col">
+      <div class="col-sm-12 col-md-6">
         <div class="summary entry-summary">
 
           <?php
@@ -67,23 +68,32 @@ if ( ! defined( 'ABSPATH' ) ) {
              * @hooked woocommerce_template_single_sharing - 50
              * @hooked WC_Structured_Data::generate_product_data() - 60
              */
-            do_action( 'woocommerce_single_product_summary' );
+            //do_action( 'woocommerce_single_product_summary' );
+            woocommerce_template_single_title();
+            woocommerce_template_single_rating();
+            woocommerce_template_single_price();
+            woocommerce_template_single_add_to_cart();
+            woocommerce_template_single_excerpt();
+            //woocommerce_template_single_meta();
+            woocommerce_template_single_sharing();
+            //WC_Structured_Data::generate_product_data();
           ?>
 
         </div><!-- .summary -->
       </div>
 
-    <?php
-      /**
-       * woocommerce_after_single_product_summary hook.
-       *
-       * @hooked woocommerce_output_product_data_tabs - 10
-       * @hooked woocommerce_upsell_display - 15
-       * @hooked woocommerce_output_related_products - 20
-       */
-      //do_action( 'woocommerce_after_single_product_summary' );
-    ?>
-
+      <div class="col-sm-12 col-md-6">
+      <?php
+        /**
+         * woocommerce_after_single_product_summary hook.
+         *
+         * @hooked woocommerce_output_product_data_tabs - 10
+         * @hooked woocommerce_upsell_display - 15
+         * @hooked woocommerce_output_related_products - 20
+         */
+        do_action( 'woocommerce_after_single_product_summary' );
+      ?>
+      </div>
     </div>
   </div>
 </div><!-- #product-<?php the_ID(); ?> -->
