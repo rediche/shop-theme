@@ -6,12 +6,14 @@ function hh_setup_styles_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hh_setup_styles_and_scripts' );
 
+// Menus
 function hh_register_menus() {
   register_nav_menu( 'mega-menu', __( 'Primær Menu', 'holte-hobby' ) );
   register_nav_menu( 'top-menu', __( 'Top Menu', 'holte-hobby' ) );
 }
 add_action( 'after_setup_theme', 'hh_register_menus' );
 
+// Widget areas
 function hh_widgets_init() {
   register_sidebar( array(
       'name'          => __( 'Footer #1', 'holte-hobby' ),
@@ -28,5 +30,18 @@ function hh_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'hh_widgets_init' );
+
+// WooCommerce Breadcrumbs
+function hh_woocommerce_breadcrumbs() {
+    return array(
+            'delimiter'   => ' &#47; ',
+            'wrap_before' => '<div class="container"><div class="row"><div class="col"><nav class="woocommerce-breadcrumb breadcrumbs card" itemprop="breadcrumb">',
+            'wrap_after'  => '</nav></div></div></div>',
+            'before'      => '',
+            'after'       => '',
+            'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+        );
+}
+add_filter( 'woocommerce_breadcrumb_defaults', 'hh_woocommerce_breadcrumbs' );
 
 ?>
