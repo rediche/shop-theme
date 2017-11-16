@@ -5,3 +5,12 @@
   height: 3rem;
   margin: 1rem 0;
 }
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}

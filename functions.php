@@ -34,7 +34,7 @@ add_action( 'widgets_init', 'hh_widgets_init' );
 // WooCommerce Breadcrumbs
 function hh_woocommerce_breadcrumbs() {
     return array(
-            'delimiter'   => ' &#47; ',
+            'delimiter'   => '&nbsp;&#47;&nbsp;',
             'wrap_before' => '<div class="container"><div class="row"><div class="col"><nav class="woocommerce-breadcrumb breadcrumbs card" itemprop="breadcrumb">',
             'wrap_after'  => '</nav></div></div></div>',
             'before'      => '',
