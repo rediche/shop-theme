@@ -39,21 +39,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-6">
-      <?php
-        /**
-         * woocommerce_before_single_product_summary hook.
-         *
-         * @hooked woocommerce_show_product_sale_flash - 10
-         * @hooked woocommerce_show_product_images - 20
-         */
-        //do_action( 'woocommerce_before_single_product_summary' );
-        woocommerce_show_product_images();
-      ?>
-      </div>
-  
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-6 order-md-2">
         <div class="summary entry-summary">
+
+          <div class="product__mobile-image">
+          <?php
+            /**
+             * woocommerce_before_single_product_summary hook.
+             *
+             * @hooked woocommerce_show_product_sale_flash - 10
+             * @hooked woocommerce_show_product_images - 20
+             */
+            //do_action( 'woocommerce_before_single_product_summary' );
+            woocommerce_show_product_images();
+          ?>
+          </div>
 
           <?php
             /**
@@ -82,7 +82,20 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div><!-- .summary -->
       </div>
 
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-6 order-md-1">
+        <div class="product__desktop-image">
+        <?php
+          /**
+           * woocommerce_before_single_product_summary hook.
+           *
+           * @hooked woocommerce_show_product_sale_flash - 10
+           * @hooked woocommerce_show_product_images - 20
+           */
+          //do_action( 'woocommerce_before_single_product_summary' );
+          woocommerce_show_product_images();
+        ?>
+        </div>
+
       <?php
         /**
          * woocommerce_after_single_product_summary hook.
