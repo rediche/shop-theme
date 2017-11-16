@@ -20,8 +20,12 @@
 
 .product-card__title {
   font-size: 1.25rem;
-  margin-bottom: .25rem;
+  margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.product-card__price {
+  margin: 0;
 }

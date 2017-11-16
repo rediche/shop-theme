@@ -1,6 +1,7 @@
 /* Utilities */
 @import "utilities/settings";
 @import "utilities/reset";
+@import "utilities/typebase";
 @import "utilities/grid";
 
 /* Blocks */

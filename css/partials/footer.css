@@ -30,7 +30,12 @@
 }
 
 .footer__widget .widgettitle {
-  margin-bottom: .5rem;
+  margin-top: 0;
+  font-size: 1.414rem;
+}
+
+.footer__widget .menu {
+  margin: 0;
 }
 
 .footer__widget .menu-item a {
