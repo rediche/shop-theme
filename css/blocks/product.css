@@ -1,7 +1,24 @@
 .product {}
 
 .product__title {
-  /* font-size: 2rem; */
   margin-top: 0;
   margin-bottom: 2rem;
+}
+
+.product__price {}
+
+.product__price del,
+.product__price ins {
+  font-size: 1rem;
+  display: block;
+}
+
+.product__price > :first-child {
+  margin-bottom: .5rem;
+}
+
+.product__price > :last-child {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
 }
