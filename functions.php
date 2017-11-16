@@ -65,4 +65,12 @@ function hh_woo_rename_tabs( $tabs ) {
 	return $tabs;
 }
 add_filter( 'woocommerce_product_tabs', 'hh_woo_rename_tabs', 98 );
+
+// WooCommerce - Remove Sidebar on all the Single Product Pages
+function hh_remove_sidebar_product_pages() {
+  if (is_product()) {
+    remove_action('woocommerce_sidebar','woocommerce_get_sidebar',10);
+  }
+}
+add_action( 'wp', 'hh_remove_sidebar_product_pages' );
 ?>
