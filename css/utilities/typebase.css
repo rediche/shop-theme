@@ -73,6 +73,7 @@ table {
   margin-top: 1.5rem;
   border-spacing: 0px;
   border-collapse: collapse;
+  width: 100%;
 }
 table td,
 table th {

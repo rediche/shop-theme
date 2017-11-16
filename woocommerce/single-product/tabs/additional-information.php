@@ -25,6 +25,6 @@ global $product;
 
 <h2 class="product-tabs__entry-title">Productspecifikation</h2>
 
-<div class="card product-tabs__entry">
+<div class="card product-tabs__entry product-tabs__entry--additional-information">
   <?php do_action( 'woocommerce_product_additional_information', $product ); ?>
 </div>
