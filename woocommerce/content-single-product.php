@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6 order-md-2">
-        <div class="summary entry-summary">
+        <div class="summary entry-summary product__content">
 
           <div class="product__mobile-image">
           <?php

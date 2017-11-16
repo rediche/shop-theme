@@ -36,6 +36,12 @@
 }
 
 @media (min-width: 768px) {
+  .product__content {
+    position: sticky;
+    top: 1rem;
+    margin-bottom: 2rem;
+  }
+
   .product__title {
     margin-bottom: 1.5rem;
     font-size: 4.242rem;
