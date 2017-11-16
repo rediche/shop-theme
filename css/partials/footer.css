@@ -32,6 +32,7 @@
 .footer__widget .widgettitle {
   margin-top: 0;
   font-size: 1.414rem;
+  font-weight: 300;
 }
 
 .footer__widget .menu {
