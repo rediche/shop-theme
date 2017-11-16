@@ -24,6 +24,11 @@
   padding: 1rem;
 }
 
+.product-tabs__entry-title {
+  font-size: 1.414rem;
+  margin-top: 1.5rem;
+}
+
 /* .product-tabs__tab.active .product-tabs__tab-link {
   background-color: var(--dark-grey);
 } */

@@ -44,4 +44,25 @@ function hh_woocommerce_breadcrumbs() {
 }
 add_filter( 'woocommerce_breadcrumb_defaults', 'hh_woocommerce_breadcrumbs' );
 
+// WooCommerce remove reviews tab
+function hh_woo_remove_product_tabs( $tabs ) {
+
+    //unset( $tabs['description'] );      	// Remove the description tab
+    unset( $tabs['reviews'] ); 			// Remove the reviews tab
+    //unset( $tabs['additional_information'] );  	// Remove the additional information tab
+
+    return $tabs;
+}
+add_filter( 'woocommerce_product_tabs', 'hh_woo_remove_product_tabs', 98 );
+
+// WooCommerce rename tabs
+function hh_woo_rename_tabs( $tabs ) {
+
+	$tabs['description']['title'] = __( 'Mere information' );		// Rename the description tab
+	//$tabs['reviews']['title'] = __( 'Ratings' );				// Rename the reviews tab
+  $tabs['additional_information']['title'] = __( 'Produktspecifikation' );	// Rename the additional information tab
+
+	return $tabs;
+}
+add_filter( 'woocommerce_product_tabs', 'hh_woo_rename_tabs', 98 );
 ?>
