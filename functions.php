@@ -6,6 +6,12 @@ function hh_setup_styles_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hh_setup_styles_and_scripts' );
 
+// Title tag enable
+function hh_theme_slug_setup() {
+  add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'hh_theme_slug_setup' );
+
 // Menus
 function hh_register_menus() {
   register_nav_menu( 'mega-menu', __( 'Primær Menu', 'holte-hobby' ) );
