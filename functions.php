@@ -80,4 +80,10 @@ function hh_remove_sidebar_product_pages() {
   }
 }
 add_action( 'wp', 'hh_remove_sidebar_product_pages' );
+
+function get_product_thumbnail_url() {
+  global $post;
+  $image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
+  return get_the_post_thumbnail_url( $post->ID, $image_size );
+}
 ?>

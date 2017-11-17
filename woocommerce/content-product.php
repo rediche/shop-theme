@@ -36,18 +36,19 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_before_shop_loop_item' );
 ?>
 <div <?php post_class('product-card card'); ?>>
-	<div class="product-card__image"><?php woocommerce_template_loop_product_thumbnail(); ?></div>
-		<div class="product-card__info">
-			<?php
-			/**
-			 * woocommerce_shop_loop_item_title hook.
-			 *
-			 * @hooked woocommerce_template_loop_product_title - 10
-			 */
-			do_action( 'woocommerce_shop_loop_item_title' );
-			?>
-			<p class="product-card__price"><?php woocommerce_template_loop_price(); ?></p>
-		</div>
+	<div class="product-card__image" style="background-image:url('<?php echo get_product_thumbnail_url(); ?>');"></div>
+	<div class="product-card__info">
+
+		<?php
+		/**
+		 * woocommerce_shop_loop_item_title hook.
+		 *
+		 * @hooked woocommerce_template_loop_product_title - 10
+		 */
+		do_action( 'woocommerce_shop_loop_item_title' );
+		?>
+		<p class="product-card__price"><?php woocommerce_template_loop_price(); ?></p>
+	</div>
 	</div>
 <?php
 /**

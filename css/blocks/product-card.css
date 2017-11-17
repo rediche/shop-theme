@@ -2,7 +2,11 @@
   margin-bottom: 2rem;
 }
 
-.product-card__image {}
+.product-card__image {
+  padding-top: 75%;
+  background-position: center;
+  background-size: cover;
+}
 
 .product-card__info {
   height: 4rem;
