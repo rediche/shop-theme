@@ -16,9 +16,11 @@
   flex-direction: column;
   font-weight: 300;
   justify-content: center;
+  color: var(--dark-grey);
 }
 
-.product-card__title {
+.product-card__title,
+.woocommerce-loop-product__title{
   font-size: 1.25rem;
   margin: 0;
   white-space: nowrap;
@@ -28,4 +30,8 @@
 
 .product-card__price {
   margin: 0;
+}
+
+.woocommerce-loop-product__link {
+  text-decoration: none;
 }
