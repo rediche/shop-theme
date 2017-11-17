@@ -70,11 +70,11 @@ if ( ! defined( 'ABSPATH' ) ) {
              */
             //do_action( 'woocommerce_single_product_summary' );
             woocommerce_template_single_title();
+            woocommerce_template_single_meta();
             woocommerce_template_single_rating();
             woocommerce_template_single_price();
             woocommerce_template_single_add_to_cart();
             woocommerce_template_single_excerpt();
-            //woocommerce_template_single_meta();
             woocommerce_template_single_sharing();
             //WC_Structured_Data::generate_product_data();
           ?>
