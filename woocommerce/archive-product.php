@@ -44,7 +44,7 @@ get_header( 'shop' ); ?>
 
                     <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-                        <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+                        <h1 class="woocommerce-products-header__title page-title category__title"><?php woocommerce_page_title(); ?></h1>
 
                     <?php endif; ?>
 
@@ -77,6 +77,7 @@ get_header( 'shop' ); ?>
 
                         <?php woocommerce_product_subcategories(); ?>
 
+                        <div class="row">
                         <?php while ( have_posts() ) : the_post(); ?>
 
                             <?php
@@ -91,7 +92,7 @@ get_header( 'shop' ); ?>
                             <?php wc_get_template_part( 'content', 'product' ); ?>
 
                         <?php endwhile; // end of the loop. ?>
-
+                        </div>
                     <?php woocommerce_product_loop_end(); ?>
 
                     <?php

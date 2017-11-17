@@ -18,6 +18,7 @@
 @import "blocks/add-to-cart";
 @import "blocks/notice";
 @import "blocks/shopping-cart";
+@import "blocks/category";
 
 /* Partials */
 @import "partials/header";
