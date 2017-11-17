@@ -2,12 +2,7 @@
   margin-bottom: 2rem;
 }
 
-.product-card__image {
-  padding-top: 75%;
-  background-position: center;
-  background-size: cover;
-  background-image: url('http://holte-modelhobby.dk/images/airboss/REV24494_2.jpg');
-}
+.product-card__image {}
 
 .product-card__info {
   height: 4rem;
@@ -22,6 +17,7 @@
 .product-card__title,
 .woocommerce-loop-product__title{
   font-size: 1.25rem;
+  line-height: 1;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -30,6 +26,23 @@
 
 .product-card__price {
   margin: 0;
+}
+
+.product-card__price .price {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.product-card__price del {
+  font-size: .85rem;
+}
+
+.product-card__price ins {
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: .5rem;
 }
 
 .woocommerce-loop-product__link {
