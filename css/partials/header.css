@@ -21,6 +21,10 @@
   text-decoration: none;
 }
 
+.top-header .menu-item a:hover {
+  text-decoration: underline;
+}
+
 .middle-header {
   display: flex;
   align-items: center;
