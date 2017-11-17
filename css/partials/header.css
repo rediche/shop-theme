@@ -50,13 +50,6 @@
   width: 100%;
 }
 
-.middle-header__shopping-cart {}
-
-.middle-header__shopping-cart-label {
-  display: none;
-}
-
-.middle-header__shopping-cart-icon,
 .middle-header__menu-toggle-icon,
 .middle-header__search-icon {
   height: 1.5rem;
@@ -95,22 +88,5 @@
 
   .middle-header__search-input {
     display: block;
-  }
-
-  .middle-header__shopping-cart {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 .75rem;
-    color: var(--white);
-    text-decoration: none;
-  }
-
-  .middle-header__shopping-cart-label {
-    display: inline;
-  }
-
-  .middle-header__shopping-cart-icon {
-    margin-right: .5rem;
   }
 }
