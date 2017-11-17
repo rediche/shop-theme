@@ -6,11 +6,12 @@ function hh_setup_styles_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hh_setup_styles_and_scripts' );
 
-// Title tag enable
-function hh_theme_slug_setup() {
-  add_theme_support( 'title-tag' );
+// Theme support
+function hh_theme_support() {
+  add_theme_support( 'title-tag' ); // New title tag support
+  add_theme_support( 'woocommerce' ); // WooCommerce Support
 }
-add_action( 'after_setup_theme', 'hh_theme_slug_setup' );
+add_action( 'after_setup_theme', 'hh_theme_support' );
 
 // Menus
 function hh_register_menus() {
