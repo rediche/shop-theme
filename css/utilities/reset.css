@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	font-family: system-ui;
 	background-color: var(--lighter-grey);
+	color: var(--dark-grey);
 	line-height: 1;
 }
 ol, ul {

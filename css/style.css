@@ -1,6 +1,7 @@
 /* Utilities */
 @import "utilities/settings";
 @import "utilities/reset";
+@import "utilities/typebase";
 @import "utilities/grid";
 
 /* Blocks */
@@ -9,8 +10,13 @@
 @import "blocks/menu";
 @import "blocks/mega-menu";
 @import "blocks/card";
+@import "blocks/product";
 @import "blocks/product-card";
 @import "blocks/product-section";
+@import "blocks/product-tabs";
+@import "blocks/breadcrumbs";
+@import "blocks/add-to-cart";
+@import "blocks/notice";
 
 /* Partials */
 @import "partials/header";

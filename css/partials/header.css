@@ -8,6 +8,7 @@
   justify-content: flex-end;
   align-items: center;
   height: 1.5rem;
+  margin: 0;
 }
 
 .top-header .menu-item {

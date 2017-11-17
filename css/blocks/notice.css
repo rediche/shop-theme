@@ -1,0 +1,22 @@
+.notice {
+  margin-bottom: 1rem;
+  background-color: var(--success);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+
+.notice a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.notice a:focus, .notice a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
