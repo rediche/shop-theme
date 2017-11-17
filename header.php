@@ -28,7 +28,7 @@
         </button>
 
         <div class="middle-header__logo">
-          <img src="<?php echo get_template_directory_uri() ?>/images/holtehobby-logo.svg" alt="Logo">
+          <a href="<?php echo get_home_url(); ?>" title="Til forsiden"><img src="<?php echo get_template_directory_uri() ?>/images/holtehobby-logo.svg" alt="Logo"></a>
         </div>
 
         <div class="middle-header__search">
