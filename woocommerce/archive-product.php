@@ -35,11 +35,11 @@ get_header( 'shop' ); ?>
 
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-3">
                 Sidebar
             </div>
             
-            <div class="col">
+            <div class="col-9">
                 <header class="woocommerce-products-header">
 
                     <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
