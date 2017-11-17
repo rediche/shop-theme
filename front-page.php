@@ -47,7 +47,9 @@
         $loop = new WP_Query( $sale_args );
         if ( $loop->have_posts() ) {
           while ( $loop->have_posts() ) : $loop->the_post();
+            ?><div class="col-sm-6 col-md-4"><?php
             wc_get_template_part( 'content', 'product' );
+            ?></div><?php
           endwhile;
         } else {
           echo __( 'Ingen produkter fundet' );
