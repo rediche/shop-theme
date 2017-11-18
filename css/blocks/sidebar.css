@@ -1,0 +1,8 @@
+.sidebar {}
+
+.sidebar__header {
+  margin-top: .75rem;
+  margin-bottom: .5rem;
+}
+
+.sidebar__categories {}

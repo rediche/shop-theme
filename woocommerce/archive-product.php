@@ -36,7 +36,28 @@ get_header( 'shop' ); ?>
     <div class="container">
         <div class="row">
             <div class="col-3">
-                Sidebar
+                <?php
+                $parentid = get_queried_object_id();
+                $subcategories_args = array('parent' => $parentid);
+                $subcategories = get_terms( 'product_cat', $subcategories_args );
+
+                if ($subcategories) :
+                ?>
+                <h3 class="sidebar__header"><?php woocommerce_page_title(); ?></h3>
+                <div class="sidebar__categories card">
+                    <ul class="list">
+                        <?php foreach ($subcategories as $subcategory) : ?>
+                        <li class="list__item">
+                            <a href="<?php echo esc_url(get_term_link($subcategory)); ?>" class="<?php echo $subcategory->slug; ?>">
+                                <?php echo $subcategory->name .' ('. $subcategory->count .')'; ?>
+                            </a>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <?php
+                endif;
+                ?>
             </div>
             
             <div class="col-9">

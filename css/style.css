@@ -19,6 +19,8 @@
 @import "blocks/notice";
 @import "blocks/shopping-cart";
 @import "blocks/category";
+@import "blocks/sidebar";
+@import "blocks/list";
 
 /* Partials */
 @import "partials/header";
