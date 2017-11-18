@@ -88,8 +88,9 @@ get_header( 'shop' ); ?>
                                  */
                                 do_action( 'woocommerce_shop_loop' );
                             ?>
-
-                            <?php wc_get_template_part( 'content', 'product' ); ?>
+                            <div class="col-sm-6 col-md-4">
+                                <?php wc_get_template_part( 'content', 'product' ); ?>
+                            </div>
 
                         <?php endwhile; // end of the loop. ?>
                         </div>

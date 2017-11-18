@@ -6,11 +6,12 @@ function hh_setup_styles_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hh_setup_styles_and_scripts' );
 
-// Title tag enable
-function hh_theme_slug_setup() {
-  add_theme_support( 'title-tag' );
+// Theme support
+function hh_theme_support() {
+  add_theme_support( 'title-tag' ); // New title tag support
+  add_theme_support( 'woocommerce' ); // WooCommerce Support
 }
-add_action( 'after_setup_theme', 'hh_theme_slug_setup' );
+add_action( 'after_setup_theme', 'hh_theme_support' );
 
 // Menus
 function hh_register_menus() {
@@ -79,4 +80,10 @@ function hh_remove_sidebar_product_pages() {
   }
 }
 add_action( 'wp', 'hh_remove_sidebar_product_pages' );
+
+function get_product_thumbnail_url() {
+  global $post;
+  $image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
+  return get_the_post_thumbnail_url( $post->ID, $image_size );
+}
 ?>
