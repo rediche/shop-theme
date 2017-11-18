@@ -35,8 +35,8 @@ get_header( 'shop' ); ?>
 
     <div class="container">
         <div class="row">
-            <div class="col-3">
-                <form type="get">
+            <div class="col-sm-12 col-md-3">
+                <form type="get" class="sidebar sidebar--open">
                     <button class="button button--raised button--fullwidth sidebar__filter" type="submit">Filtrer</button>
                     <?php
                     $parentid = get_queried_object_id();
@@ -46,7 +46,7 @@ get_header( 'shop' ); ?>
                     if ($subcategories) :
                     ?>
                     <h3 class="sidebar__header"><?php woocommerce_page_title(); ?></h3>
-                    <div class="sidebar__categories card">
+                    <div class="sidebar__categories sidebar__card card">
                         <ul class="list">
                             <?php foreach ($subcategories as $subcategory) : ?>
                             <li class="list__item">
@@ -62,13 +62,13 @@ get_header( 'shop' ); ?>
                     ?>
 
                     <h3 class="sidebar__header">Pris</h3>
-                    <div class="sidebar__price card">
+                    <div class="sidebar__price sidebar__card card">
                         <input type="number" name="min_price" class="input" value="0"> – <input type="number" name="max_price" class="input" value="1000">
                     </div>
                 </form>
             </div>
             
-            <div class="col-9">
+            <div class="col-sm-12 col-md-9">
                 <header class="woocommerce-products-header">
 
                     <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
