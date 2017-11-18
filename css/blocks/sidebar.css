@@ -1,8 +1,29 @@
 .sidebar {}
 
-.sidebar__header {
+.sidebar__filter {
+  position: sticky;
+  top: 1rem;
   margin-top: .75rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar__header {
+  margin-top: .5rem;
   margin-bottom: .5rem;
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .sidebar__categories {}
+
+.sidebar__price {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar__price .input {
+  width: 40%;
+}

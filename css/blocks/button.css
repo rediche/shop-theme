@@ -34,3 +34,7 @@
   background-color: var(--light-grey);
   box-shadow: none;
 }
+
+.button--fullwidth {
+  width: 100%;
+}
