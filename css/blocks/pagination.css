@@ -1,0 +1,23 @@
+.pagination {}
+
+.pagination > .page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination > .page-numbers .page-numbers {
+  padding: .5rem;
+  border-radius: .125rem;
+  color: var(--dark-grey);
+  text-decoration: none;
+  margin: 0 .125rem;
+}
+
+.pagination > .page-numbers .page-numbers:hover {
+  background-color: var(--light-grey);
+}
+
+.pagination > .page-numbers .page-numbers.current {
+  background-color: var(--light-grey);
+}

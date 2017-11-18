@@ -55,6 +55,7 @@
     box-shadow: none;
     padding: 0;
     width: auto;
+    margin-bottom: 2rem;
   }
 
   .sidebar__card {
