@@ -15,7 +15,7 @@
       <div class="col-sm-12 col-md-4">
         <a class="card category-entry" href="<?php echo $item->url; ?>">
           <div class="category-entry__inner" style="background-image:url('<?php echo get_template_directory_uri() ?>/images/categories/<?php echo $cta_images[$key]; ?>');">
-            <h2>Til lands</h2>
+            <h2><?php echo $item->title; ?></h2>
           </div>
         </a>
       </div>
