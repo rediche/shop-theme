@@ -43,7 +43,7 @@ get_header( 'shop' ); ?>
                     $subcategories_args = array('parent' => $parentid);
                     $subcategories = get_terms( 'product_cat', $subcategories_args );
 
-                    if ($subcategories) :
+                    if ($subcategories && !is_search()) :
                     ?>
                     <h3 class="sidebar__header"><?php woocommerce_page_title(); ?></h3>
                     <div class="sidebar__categories sidebar__card card">
