@@ -17,6 +17,7 @@ add_action( 'after_setup_theme', 'hh_theme_support' );
 function hh_register_menus() {
   register_nav_menu( 'mega-menu', __( 'Primær Menu', 'holte-hobby' ) );
   register_nav_menu( 'top-menu', __( 'Top Menu', 'holte-hobby' ) );
+  register_nav_menu( 'tag-menu', __( 'Forside CTA Menu', 'holte-hobby' ) );
 }
 add_action( 'after_setup_theme', 'hh_register_menus' );
 

@@ -3,27 +3,25 @@
 <div class="front-page">
   <div class="container">
     <div class="row">
+      <?php
+      $locations = get_nav_menu_locations(); // Find WP Nav Locations
+      $cta_menu = get_term($locations['tag-menu']); // Choose the right location
+      $cta_menu_items = wp_get_nav_menu_items($cta_menu->term_id); // Get nav items from said menu
+      $cta_images[0] = 'til-lands-spejlvendt.jpg';
+      $cta_images[1] = 'til-vands.jpg';
+      $cta_images[2] = 'i-luften.jpg';
+      foreach ($cta_menu_items as $key => $item) :
+      ?>
       <div class="col-sm-12 col-md-4">
-        <a class="card category-entry" href="#">
-          <div class="category-entry__inner" style="background-image:url('<?php echo get_template_directory_uri() ?>/images/categories/til-lands-spejlvendt.jpg');">
+        <a class="card category-entry" href="<?php echo $item->url; ?>">
+          <div class="category-entry__inner" style="background-image:url('<?php echo get_template_directory_uri() ?>/images/categories/<?php echo $cta_images[$key]; ?>');">
             <h2>Til lands</h2>
           </div>
         </a>
       </div>
-      <div class="col-sm-12 col-md-4">
-        <a class="card category-entry" href="#">
-          <div class="category-entry__inner" style="background-image:url('<?php echo get_template_directory_uri() ?>/images/categories/til-vands.jpg');">
-            <h2>Til vands</h2>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <a class="card category-entry" href="#">
-          <div class="category-entry__inner" style="background-image:url('<?php echo get_template_directory_uri() ?>/images/categories/i-luften.jpg');">
-            <h2>I luften</h2>
-          </div>
-        </a>
-      </div>
+      <?php
+      endforeach;
+      ?>
     </div>
   </div>
 
