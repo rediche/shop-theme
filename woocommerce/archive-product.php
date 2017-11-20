@@ -37,13 +37,19 @@ get_header( 'shop' ); ?>
         <div class="row">
             <div class="col-sm-12 col-md-3">
                 <form type="get" class="sidebar sidebar--open">
+                    <?php if (is_search()) : ?>
+                        <input type="hidden" name="s" value="<?php echo get_search_query(); ?>" />
+                        <input type="hidden" name="post_type" value="product" />
+                    <?php endif ?>
+
                     <button class="button button--raised button--fullwidth sidebar__filter" type="submit">Filtrer</button>
+                    
                     <?php
                     $parentid = get_queried_object_id();
                     $subcategories_args = array('parent' => $parentid);
                     $subcategories = get_terms( 'product_cat', $subcategories_args );
 
-                    if ($subcategories) :
+                    if ($subcategories && !is_search()) :
                     ?>
                     <h3 class="sidebar__header"><?php woocommerce_page_title(); ?></h3>
                     <div class="sidebar__categories sidebar__card card">
@@ -61,9 +67,20 @@ get_header( 'shop' ); ?>
                     endif;
                     ?>
 
+                    <?php
+                        $category = get_term( intval(get_queried_object_id()), 'product_cat' );
+                        $maxprice = get_category_max_price($category);
+                        wp_reset_postdata();
+
+                        $current_maxprice = $maxprice;
+                        if (isset($_GET['max_price']) && !empty($_GET['max_price'])) {
+                            $current_maxprice = $_GET['max_price'];
+                        }
+                    ?>
+
                     <h3 class="sidebar__header">Pris</h3>
                     <div class="sidebar__price sidebar__card card">
-                        <input type="number" name="min_price" class="input" value="0"> – <input type="number" name="max_price" class="input" value="1000">
+                        <input type="number" name="min_price" class="input" value="0" step="1" min="0" max="<?php echo $maxprice; ?>"> – <input type="number" name="max_price" class="input" value="<?php echo $current_maxprice; ?>" step="1" min="0" max="<?php echo $maxprice; ?>">
                     </div>
                 </form>
             </div>
