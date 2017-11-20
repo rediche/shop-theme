@@ -10,6 +10,9 @@ add_action( 'wp_enqueue_scripts', 'hh_setup_styles_and_scripts' );
 function hh_theme_support() {
   add_theme_support( 'title-tag' ); // New title tag support
   add_theme_support( 'woocommerce' ); // WooCommerce Support
+  add_theme_support( 'wc-product-gallery-zoom' ); // WooCommerce Gallery Zoom
+  //add_theme_support( 'wc-product-gallery-lightbox' ); // WooCommerce Gallery Lightbox
+  add_theme_support( 'wc-product-gallery-slider' ); // WooCommerce Gallery Slider
 }
 add_action( 'after_setup_theme', 'hh_theme_support' );
 
