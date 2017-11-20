@@ -4,6 +4,17 @@
   border: 0;
 }
 
+.woocommerce table.shop_table.cart-table > thead th {
+  border-bottom: 1px solid var(--light-grey);
+}
+.woocommerce table.shop_table.cart-table tr:last-of-type td {
+  border-top: 1px solid var(--light-grey);
+}
+
+.woocommerce table.shop_table td {
+  border-top: 0;
+}
+
 .woocommerce #content table.cart img, 
 .woocommerce table.cart img, 
 .woocommerce-page #content table.cart img, 
@@ -13,7 +24,7 @@
 }
 
 .cart_item .product-name a {
-  color: var(--orange);
+  color: var(--dark-grey);
   text-decoration: none;
 }
 
@@ -40,4 +51,12 @@
 .woocommerce button.button:hover {
   background-color: var(--dark-grey);
   color: var(--white);
+}
+
+.woocommerce-cart-form__cart-item.cart_item:nth-child(even) {
+  background-color: var(--lighter-grey);
+}
+
+.woocommerce-cart-form__cart-item.cart_item:hover {
+  background-color: var(--light-grey);
 }

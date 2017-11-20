@@ -4,7 +4,7 @@
   height: 2.25rem;
   border-radius: .125rem;
   border: 1px solid color(var(--dark-grey) alpha(-62%));
-  padding: 0 .75rem;
+  padding: 0 .25rem 0 .75rem;
   font-size: 14px;
 }
 
