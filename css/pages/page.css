@@ -1,0 +1,10 @@
+.page {
+  margin: 2rem 0;
+}
+
+.page__title {
+  font-size: 2.828rem;
+  line-height: 3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
