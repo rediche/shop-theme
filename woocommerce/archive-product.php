@@ -37,7 +37,13 @@ get_header( 'shop' ); ?>
         <div class="row">
             <div class="col-sm-12 col-md-3">
                 <form type="get" class="sidebar sidebar--open">
+                    <?php if (is_search()) : ?>
+                        <input type="hidden" name="s" value="<?php echo get_search_query(); ?>" />
+                        <input type="hidden" name="post_type" value="product" />
+                    <?php endif ?>
+
                     <button class="button button--raised button--fullwidth sidebar__filter" type="submit">Filtrer</button>
+                    
                     <?php
                     $parentid = get_queried_object_id();
                     $subcategories_args = array('parent' => $parentid);
