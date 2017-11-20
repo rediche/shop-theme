@@ -1,13 +1,18 @@
+.cart__totals {
+  font-size: 1.414rem;
+  margin-top: 0;
+}
+
 /* Inheritance... So we just use WooCommerce CSS for this */
-.woocommerce table.shop_table.cart-table {
+.woocommerce table.shop_table {
   border-radius: .125rem;
   border: 0;
 }
 
-.woocommerce table.shop_table.cart-table > thead th {
+.woocommerce table.shop_table > thead th {
   border-bottom: 1px solid var(--light-grey);
 }
-.woocommerce table.shop_table.cart-table tr:last-of-type td {
+.woocommerce table.shop_table tr:last-of-type td {
   border-top: 1px solid var(--light-grey);
 }
 
@@ -36,8 +41,22 @@
   width: 7.5rem;
 }
 
+.woocommerce a.button.alt {
+  display: flex;
+  color: var(--dark-grey);
+  background-color: var(--orange);
+  box-shadow: var(--shadow-2dp);
+  font-weight: 700;
+}
+
+.woocommerce a.button.alt:hover {
+  background-color: var(--dark-orange);
+  color: var(--dark-grey);
+}
+
 .woocommerce input.button,
-.woocommerce button.button {
+.woocommerce button.button,
+.woocommerce a.button {
   font-weight: 400;
   border-radius: .125rem;
   color: var(--white);
