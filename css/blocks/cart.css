@@ -1,0 +1,43 @@
+/* Inheritance... So we just use WooCommerce CSS for this */
+.woocommerce table.shop_table.cart-table {
+  border-radius: .125rem;
+  border: 0;
+}
+
+.woocommerce #content table.cart img, 
+.woocommerce table.cart img, 
+.woocommerce-page #content table.cart img, 
+.woocommerce-page table.cart img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.cart_item .product-name a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.cart_item .product-name a:hover {
+  text-decoration: underline;
+}
+
+.woocommerce table.cart td.actions .input-text {
+  width: 7.5rem;
+}
+
+.woocommerce input.button,
+.woocommerce button.button {
+  font-weight: 400;
+  border-radius: .125rem;
+  color: var(--white);
+  background-color: var(--dark-grey);
+  font-size: 14px;
+  padding: 0 1rem;
+  line-height: normal;
+}
+
+.woocommerce input.button:hover,
+.woocommerce button.button:hover {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
