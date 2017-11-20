@@ -90,4 +90,30 @@ function get_product_thumbnail_url() {
   $image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
   return get_the_post_thumbnail_url( $post->ID, $image_size );
 }
+
+function get_category_max_price($category) {
+  
+  $args = array(
+      'posts_per_page' => 1,
+      'post_type' => 'product',
+      'orderby' => 'meta_value_num',
+      'order' => 'DESC',
+      'tax_query' => array(
+          array(
+              'taxonomy' => 'product_cat',
+              'field' => 'slug',
+              'terms' => $category->slug,
+              'operator' => 'IN'
+          )
+      ),
+      'meta_query' => array(
+          array(
+              'key' => '_price',
+          )
+      )       
+  );
+  
+  $loop = new WP_Query($args);
+  return get_post_meta($loop->posts[0]->ID, '_price', true);
+}
 ?>
