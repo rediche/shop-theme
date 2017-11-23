@@ -22,6 +22,7 @@
 @import "blocks/sidebar";
 @import "blocks/list";
 @import "blocks/pagination";
+@import "blocks/cart";
 @import "blocks/woocommerce-product-gallery";
 
 /* Partials */
@@ -30,3 +31,4 @@
 
 /* Pages */
 @import "pages/front-page";
+@import "pages/page";

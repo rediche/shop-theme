@@ -3,6 +3,7 @@ Example: --custom-property: 10px; defined a custom property with the value 10px.
 This property can then be used as: var(--custom-property) and will be resolved to be 10px in the browser. */
 :root {
   --orange: #FF9800;
+  --dark-orange: #F57C00;
   --dark-grey: #263238;
   --medium-grey: #546E7A;
   --lighter-grey: #FAFAFA;

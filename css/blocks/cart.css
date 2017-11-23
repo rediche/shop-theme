@@ -1,0 +1,81 @@
+.cart__totals {
+  font-size: 1.414rem;
+  margin-top: 0;
+}
+
+/* Inheritance... So we just use WooCommerce CSS for this */
+.woocommerce table.shop_table {
+  border-radius: .125rem;
+  border: 0;
+}
+
+.woocommerce table.shop_table > thead th {
+  border-bottom: 1px solid var(--light-grey);
+}
+.woocommerce table.shop_table tr:last-of-type td {
+  border-top: 1px solid var(--light-grey);
+}
+
+.woocommerce table.shop_table td {
+  border-top: 0;
+}
+
+.woocommerce #content table.cart img, 
+.woocommerce table.cart img, 
+.woocommerce-page #content table.cart img, 
+.woocommerce-page table.cart img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.cart_item .product-name a {
+  color: var(--dark-grey);
+  text-decoration: none;
+}
+
+.cart_item .product-name a:hover {
+  text-decoration: underline;
+}
+
+.woocommerce table.cart td.actions .input-text {
+  width: 7.5rem;
+}
+
+.woocommerce a.button.alt {
+  display: flex;
+  color: var(--dark-grey);
+  background-color: var(--orange);
+  box-shadow: var(--shadow-2dp);
+  font-weight: 700;
+}
+
+.woocommerce a.button.alt:hover {
+  background-color: var(--dark-orange);
+  color: var(--dark-grey);
+}
+
+.woocommerce input.button,
+.woocommerce button.button,
+.woocommerce a.button {
+  font-weight: 400;
+  border-radius: .125rem;
+  color: var(--white);
+  background-color: var(--dark-grey);
+  font-size: 14px;
+  padding: 0 1rem;
+  line-height: normal;
+}
+
+.woocommerce input.button:hover,
+.woocommerce button.button:hover {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+.woocommerce-cart-form__cart-item.cart_item:nth-child(even) {
+  background-color: var(--lighter-grey);
+}
+
+.woocommerce-cart-form__cart-item.cart_item:hover {
+  background-color: var(--light-grey);
+}
