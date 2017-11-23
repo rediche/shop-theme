@@ -23,6 +23,7 @@
 @import "blocks/list";
 @import "blocks/pagination";
 @import "blocks/cart";
+@import "blocks/woocommerce-product-gallery";
 
 /* Partials */
 @import "partials/header";

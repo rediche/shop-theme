@@ -10,6 +10,9 @@ add_action( 'wp_enqueue_scripts', 'hh_setup_styles_and_scripts' );
 function hh_theme_support() {
   add_theme_support( 'title-tag' ); // New title tag support
   add_theme_support( 'woocommerce' ); // WooCommerce Support
+  add_theme_support( 'wc-product-gallery-zoom' ); // WooCommerce Gallery Zoom
+  //add_theme_support( 'wc-product-gallery-lightbox' ); // WooCommerce Gallery Lightbox
+  add_theme_support( 'wc-product-gallery-slider' ); // WooCommerce Gallery Slider
 }
 add_action( 'after_setup_theme', 'hh_theme_support' );
 
@@ -17,6 +20,7 @@ add_action( 'after_setup_theme', 'hh_theme_support' );
 function hh_register_menus() {
   register_nav_menu( 'mega-menu', __( 'Primær Menu', 'holte-hobby' ) );
   register_nav_menu( 'top-menu', __( 'Top Menu', 'holte-hobby' ) );
+  register_nav_menu( 'tag-menu', __( 'Forside CTA Menu', 'holte-hobby' ) );
 }
 add_action( 'after_setup_theme', 'hh_register_menus' );
 
@@ -85,5 +89,31 @@ function get_product_thumbnail_url() {
   global $post;
   $image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
   return get_the_post_thumbnail_url( $post->ID, $image_size );
+}
+
+function get_category_max_price($category) {
+  
+  $args = array(
+      'posts_per_page' => 1,
+      'post_type' => 'product',
+      'orderby' => 'meta_value_num',
+      'order' => 'DESC',
+      'tax_query' => array(
+          array(
+              'taxonomy' => 'product_cat',
+              'field' => 'slug',
+              'terms' => $category->slug,
+              'operator' => 'IN'
+          )
+      ),
+      'meta_query' => array(
+          array(
+              'key' => '_price',
+          )
+      )       
+  );
+  
+  $loop = new WP_Query($args);
+  return get_post_meta($loop->posts[0]->ID, '_price', true);
 }
 ?>
