@@ -24,6 +24,7 @@
 @import "blocks/pagination";
 @import "blocks/cart";
 @import "blocks/woocommerce-product-gallery";
+@import "blocks/woocommerce-form";
 
 /* Partials */
 @import "partials/header";
