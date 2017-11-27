@@ -80,6 +80,12 @@
   background-color: var(--light-grey);
 }
 
+.woocommerce-cart-item a.remove {
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+}
+
 .woocommerce-cart-form__contents .coupon {
   display: flex;  
   justify-content: space-between;
@@ -87,6 +93,11 @@
 
 .woocommerce #content table.cart td.actions .coupon::after, .woocommerce #content table.cart td.actions .coupon::before, .woocommerce table.cart td.actions .coupon::after, .woocommerce table.cart td.actions .coupon::before, .woocommerce-page #content table.cart td.actions .coupon::after, .woocommerce-page #content table.cart td.actions .coupon::before, .woocommerce-page table.cart td.actions .coupon::after, .woocommerce-page table.cart td.actions .coupon::before {
   display: none;
+}
+
+.woocommerce .return-to-shop a.button {
+  display: inline-flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
