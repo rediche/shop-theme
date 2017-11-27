@@ -1,0 +1,19 @@
+.woocommerce form.checkout_coupon.coupon-form {
+  border: 0;
+  border-radius: .125rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.woocommerce form.checkout_coupon.coupon-form .button {
+  margin-left: 1rem;
+}
+
+.woocommerce form.checkout_coupon.coupon-form .input-text {
+  flex: 1;
+}
+
+.woocommerce form.checkout_coupon.coupon-form .clear {
+  display: none;
+}

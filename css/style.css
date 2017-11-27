@@ -23,7 +23,9 @@
 @import "blocks/list";
 @import "blocks/pagination";
 @import "blocks/cart";
+@import "blocks/coupon-form";
 @import "blocks/woocommerce-product-gallery";
+@import "blocks/woocommerce-form";
 
 /* Partials */
 @import "partials/header";
@@ -32,3 +34,4 @@
 /* Pages */
 @import "pages/front-page";
 @import "pages/page";
+@import "pages/checkout";
