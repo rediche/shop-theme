@@ -80,6 +80,12 @@
   background-color: var(--light-grey);
 }
 
+.woocommerce-cart-item a.remove {
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+}
+
 .woocommerce-cart-form__contents .coupon {
   display: flex;  
   justify-content: space-between;
