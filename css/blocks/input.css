@@ -9,6 +9,11 @@
   font-size: 14px;
 }
 
+textarea.input,
+textarea.input-text {
+  padding: .5rem .75rem;
+}
+
 .input:focus,
 .input-text:focus {
   outline: none;
