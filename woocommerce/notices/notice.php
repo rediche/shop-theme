@@ -2,7 +2,7 @@
 /**
  * Show messages
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/notices/success.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/notices/notice.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -27,12 +27,6 @@ if ( ! $messages ) {
 ?>
 
 <?php foreach ( $messages as $message ) : ?>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <!-- <div class="woocommerce-message"><?php echo wp_kses_post( $message ); ?></div> -->
-        <div class="notice notice--success card"><?php echo wp_kses_post( $message ); ?></div>
-      </div>
-    </div>
-  </div>
+	<!-- <div class="woocommerce-info"><?php echo wp_kses_post( $message ); ?></div> -->
+	<div class="notice notice--info card"><?php echo wp_kses_post( $message ); ?></div>
 <?php endforeach; ?>

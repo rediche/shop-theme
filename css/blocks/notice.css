@@ -1,13 +1,12 @@
 .notice {
   margin-bottom: 1rem;
-  background-color: var(--success);
-  color: var(--white);
+  background-color: var(--white);
   display: flex;
   align-items: center;
-  height: 2.5rem;
+  min-height: 2.5rem;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding-left: 1rem;
+  padding: .5rem 1rem;
 }
 
 .notice a {
@@ -19,4 +18,18 @@
 .notice a:focus, .notice a:hover {
   background-color: transparent;
   text-decoration: underline;
+}
+
+.notice--info {}
+
+.notice--success {
+  background-color: var(--success);
+  color: var(--white);
+}
+
+.notice--error {
+  background-color: var(--error);
+  color: var(--white);
+  flex-direction: column;
+  align-items: flex-start;
 }
