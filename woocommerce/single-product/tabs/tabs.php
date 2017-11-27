@@ -39,7 +39,7 @@ if ( ! empty( $tabs ) ) : ?>
 			<?php endforeach; ?>
 		</ul>
 		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div id="tab-<?php echo esc_attr( $key ); ?>">
+			<div id="tab-<?php echo esc_attr( $key ); ?>" class="content">
 				<?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
 			</div>
 		<?php endforeach; ?>

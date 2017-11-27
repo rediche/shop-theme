@@ -3,6 +3,7 @@
 @import "utilities/reset";
 @import "utilities/typebase";
 @import "utilities/grid";
+@import "utilities/content";
 
 /* Blocks */
 @import "blocks/button";
