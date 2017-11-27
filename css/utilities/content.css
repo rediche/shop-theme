@@ -1,0 +1,137 @@
+/* == WordPress WYSIWYG Editor Styles == */
+
+/* Aligns */
+.content .alignleft, 
+.content img.alignleft {
+	margin-right: 1.5em;
+	display: inline;
+	float: left;
+}
+
+.content .alignright, 
+.content img.alignright {
+	margin-left: 1.5em;
+	display: inline;
+	float: right;
+}
+
+.content .aligncenter, 
+.content img.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+}
+
+.content .alignnone, .content img.alignnone {
+	/* not sure about this one */
+}
+
+/* Captions */
+.content .wp-caption {
+	margin-bottom: 1.5em;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.content .wp-caption img {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+}
+  
+.content .wp-caption p.wp-caption-text {
+	line-height: 1.5;
+	font-size: 10px;
+	margin: 0;
+}
+
+.content .wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+}
+
+/* Blockquotes */
+.content blockquote.left {
+	margin-right: 20px;
+	text-align: right;
+	margin-left: 0;
+	width: 33%;
+	float: left;
+}
+
+.content blockquote.right {
+	margin-left: 20px;
+	text-align: left;
+	margin-right: 0;
+	width: 33%;
+	float: right;
+}
+
+.content blockquote {
+  padding: 0 1rem;
+  font-size: 115%;
+}
+
+/* Tables */
+.content table {
+  width: 100%;
+}
+
+.content table tr:nth-child(even) {
+  background-color: var(--lighter-grey);
+}
+
+.content table tr:nth-child(odd) {
+  background-color: var(--white);
+} 
+
+.content table th {
+  font-weight: 700;
+}
+
+.content table td {
+  padding: 0 1rem;
+}
+
+/* Lists */
+.content ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.content ol {
+  list-style-type: decimal;
+  margin-left: 2rem;
+}
+
+/* Code */
+code, tt, var {
+  font-family: monospace;
+}
+
+/* Gallery */
+.content .gallery dl {}
+.content .gallery dt {}
+.content .gallery dd {}
+.content .gallery dl a {}
+.content .gallery dl img {}
+.content .gallery-caption {}
+
+/* Sizes */
+.content .size-full {}
+.content .size-large {}
+.content .size-medium {}
+.content .size-thumbnail {}
+
+.content small {
+  font-size: smaller;
+}
+
+.content sub {
+  vertical-align: sub;
+}
+
+.content sup {
+  vertical-align: super;
+}
