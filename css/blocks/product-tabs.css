@@ -48,6 +48,10 @@
   margin: 0;
 }
 
+.product-tabs__entry p {
+  word-wrap: break-word;
+}
+
 .product-tabs__entry .shop_attributes tr:nth-child(even) {
   background-color: var(--lighter-grey);
 }
