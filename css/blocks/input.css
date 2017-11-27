@@ -1,4 +1,5 @@
-.input {
+.input,
+.input-text {
   display: inline-flex;
   background-color: var(--white);
   height: 2.25rem;
@@ -8,7 +9,8 @@
   font-size: 14px;
 }
 
-.input:focus {
+.input:focus,
+.input-text:focus {
   outline: none;
   border-color: color(var(--dark-grey) alpha(-46%));
 }
