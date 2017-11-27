@@ -116,4 +116,7 @@ function get_category_max_price($category) {
   $loop = new WP_Query($args);
   return get_post_meta($loop->posts[0]->ID, '_price', true);
 }
+
+// WooCommerce disable going directly to product, if only 1 result.
+add_filter( 'woocommerce_redirect_single_search_result', '__return_false' );
 ?>
