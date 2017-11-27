@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
-	<div class="woocommerce-billing-fields__field-wrapper row">
+	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
       $fields = $checkout->get_checkout_fields( 'billing' );
       
@@ -44,14 +44,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				if ( isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
 					$field['country'] = $checkout->get_value( $field['country_field'] );
         }
-
-        /* Hvis class har "form-row-first" eller "form-row-last" i array, så tilføj "col-6". */
-        if ( in_array('form-row-first', $field['class']) || in_array('form-row-last', $field['class'])) {
-          array_push($field['class'], 'col-6');
-        } else {
-          array_push($field['class'], 'col-12');
-        }
-
 				woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 			}
 		?>
