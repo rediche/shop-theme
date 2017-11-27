@@ -23,6 +23,7 @@
 @import "blocks/list";
 @import "blocks/pagination";
 @import "blocks/cart";
+@import "blocks/coupon-form";
 @import "blocks/woocommerce-product-gallery";
 @import "blocks/woocommerce-form";
 
