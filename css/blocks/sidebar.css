@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   width: 80%;
+  max-width: 18rem;
   background-color: var(--white);
   transform: translateX(calc(-100% - 1rem));
   transition: .3s transform;
@@ -77,11 +78,17 @@
     box-shadow: none;
     padding: 0;
     width: auto;
+    max-width: none;
     margin-bottom: 5.5rem;
     transform: none;
     position: sticky;
     top: 2rem;
     height: auto;
+    z-index: 1;
+  }
+
+  .sidebar__header {
+    padding: 0;
   }
 
   .sidebar__close {

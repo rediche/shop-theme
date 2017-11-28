@@ -13,6 +13,7 @@ html.overflow-hidden body {
   left: 0;
   height: 100%;
   width: 80%;
+  max-width: 18rem;
   transform: translateX(calc(-100% - 1rem));
   transition: .3s transform;
   z-index: 999999; /* Overwrite WP Admin Bar Z-index */
@@ -90,6 +91,7 @@ html.overflow-hidden body {
     transform: none;
     position: relative;
     width: auto;
+    max-width: none;
   }
 
   .mega-menu__close {
@@ -130,7 +132,8 @@ html.overflow-hidden body {
     background-color: var(--dark-grey);
   }
 
-  .mega-menu__list > .menu-item.current-menu-ancestor a {
+  .mega-menu__list > .menu-item.current-menu-ancestor > a,
+  .mega-menu__list > .current-menu-item > a {
     background-color: var(--shade-grey);
   }
 
@@ -206,27 +209,3 @@ html.overflow-hidden body {
     justify-content: flex-start;
   }
 }
-
-/* @media (min-width: 576px) {
-  .mega-menu__list-item > .mega-menu__sub-list {
-    width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .mega-menu__list-item > .mega-menu__sub-list {
-    width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .mega-menu__list-item > .mega-menu__sub-list {
-    width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .mega-menu__list-item > .mega-menu__sub-list {
-    width: 1140px;
-  }
-} */
