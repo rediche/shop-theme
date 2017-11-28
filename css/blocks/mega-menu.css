@@ -32,11 +32,18 @@
 
 .mega-menu__close-button {
   height: 2.5rem;
+  width: 2.5rem;
+  background-color: transparent;
+  border: 0;
 }
 
 .mega-menu__list {
   margin: 1rem 0;
   padding: 0;
+}
+
+.mega-menu__list > .menu-item {
+  cursor: pointer;
 }
 
 .mega-menu__list > .menu-item a {
@@ -48,6 +55,16 @@
 
 .mega-menu__list > .menu-item > .sub-menu {
   display: none;
+}
+
+.mega-menu__list > .menu-item.menu-item--open > a {
+  background-color: var(--light-grey);
+}
+
+.mega-menu__list > .menu-item.menu-item--open > .sub-menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
 }
 
 @media (min-width: 768px) {
