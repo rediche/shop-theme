@@ -1,3 +1,23 @@
 .category__title {
   margin-top: 0;
+  font-size: 2.828rem;
+  line-height: 3rem;
+  margin-top: 1rem;
+}
+
+.category__sort {
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.category__sort > * {
+  margin-bottom: .5rem;
+}
+
+.category__sort .woocommerce-result-count {
+  margin-top: 0;
+}
+
+.category__sort .orderby {
+  width: 100%;
 }
