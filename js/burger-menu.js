@@ -10,15 +10,18 @@ function enableBurgerMenuToggle() {
   const burgerMenuToggle = document.querySelector('[data-menu-toggle]');
   const burgerMenuClose = document.querySelector('[data-menu-close]');
   const burgerMenu = document.querySelector('[data-menu]');
+  const body = document.querySelector('body');
 
   if (!burgerMenuToggle || !burgerMenuClose || !burgerMenu) return;
 
   burgerMenuToggle.addEventListener('click', function() {
     burgerMenu.classList.toggle('mega-menu--open');
+    body.classList.toggle('overflow-hidden');
   });
 
   burgerMenuClose.addEventListener('click', function() {
     burgerMenu.classList.remove('mega-menu--open');
+    body.classList.remove('overflow-hidden');
   });
 
   enableMenuToggles();
