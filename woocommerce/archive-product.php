@@ -35,14 +35,19 @@ get_header( 'shop' ); ?>
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-3">
-                <form type="get" class="sidebar sidebar--open">
+            <div class="col-sm-12 col-lg-3">
+                <form type="get" class="sidebar" data-sidebar>
+                    <div class="sidebar__close">
+                        <button class="sidebar__close-button" data-sidebar-close>
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                            </svg>
+                        </button>
+                    </div>
                     <?php if (is_search()) : ?>
                         <input type="hidden" name="s" value="<?php echo get_search_query(); ?>" />
                         <input type="hidden" name="post_type" value="product" />
                     <?php endif ?>
-
-                    <button class="button button--raised button--fullwidth sidebar__filter" type="submit">Filtrer</button>
                     
                     <?php
                     $parentid = get_queried_object_id();
@@ -82,10 +87,12 @@ get_header( 'shop' ); ?>
                     <div class="sidebar__price sidebar__card card">
                         <input type="number" name="min_price" class="input" value="0" step="1" min="0" max="<?php echo $maxprice; ?>"> – <input type="number" name="max_price" class="input" value="<?php echo $current_maxprice; ?>" step="1" min="0" max="<?php echo $maxprice; ?>">
                     </div>
+
+                    <button class="button button--raised button--fullwidth sidebar__filter" type="submit">Filtrer</button>
                 </form>
             </div>
             
-            <div class="col-sm-12 col-md-9">
+            <div class="col-sm-12 col-lg-9">
                 <header class="woocommerce-products-header">
 
                     <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -116,8 +123,19 @@ get_header( 'shop' ); ?>
                          * @hooked woocommerce_result_count - 20
                          * @hooked woocommerce_catalog_ordering - 30
                          */
-                        do_action( 'woocommerce_before_shop_loop' );
+                        //do_action( 'woocommerce_before_shop_loop' );
+                        wc_print_notices();
                     ?>
+                    <div class="category__sort row">
+                        <div class="col-xs-6 col-sm-7">
+                            <?php woocommerce_result_count(); ?>
+                        </div>
+                        <div class="col-xs-6 col-sm-5">
+                            <?php woocommerce_catalog_ordering(); ?>
+                        </div>
+                    </div>
+
+                    <button class="button button--fullwidth button--raised sidebar__toggle" data-sidebar-toggle>Filtrer</button>
 
                     <?php woocommerce_product_loop_start(); ?>
 

@@ -1,5 +1,6 @@
 .list {
   margin: 0 0 2rem;
+  padding: .5rem 0;
 }
 
 .list__item {}

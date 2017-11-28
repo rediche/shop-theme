@@ -4,6 +4,7 @@
 function hh_setup_styles_and_scripts() {
   wp_enqueue_style( 'style', get_stylesheet_directory_uri().'/build/style.css' );
   wp_enqueue_script( 'burger-menu', get_stylesheet_directory_uri().'/js/burger-menu.js' );
+  wp_enqueue_script( 'sidebar', get_stylesheet_directory_uri().'/js/sidebar.js' );
 }
 add_action( 'wp_enqueue_scripts', 'hh_setup_styles_and_scripts' );
 
