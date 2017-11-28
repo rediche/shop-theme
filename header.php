@@ -69,7 +69,7 @@
       </svg>
     </button>
   </div>
-  <div class="container">
+  <div class="container mega-menu__container">
     <?php 
     wp_nav_menu( array(
       'theme_location' => 'mega-menu',
