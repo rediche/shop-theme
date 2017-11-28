@@ -67,6 +67,10 @@
   padding-left: 1rem;
 }
 
+.mega-menu__list > .menu-item.menu-item--open > .sub-menu > .menu-item > .sub-menu {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .mega-menu {
     background-color: var(--medium-grey);
