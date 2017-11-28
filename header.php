@@ -21,7 +21,7 @@
 
     <div class="row">
       <div class="middle-header col">
-        <button class="middle-header__menu-toggle">
+        <button class="middle-header__menu-toggle" data-menu-toggle>
           <svg  class="middle-header__menu-toggle-icon">
             <g id="menu"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></g>
           </svg>
@@ -58,13 +58,18 @@
   </div>
 </header>
 
-<nav class="mega-menu">
-  <div class="container">
-    <div class="row mega-menu__logo-row">
-      <div class="col">
-        <img class="mega-menu__logo" src="<?php echo get_template_directory_uri() ?>/images/holtehobby-logo-dark.svg" alt="Logo">
-      </div>
+<nav class="mega-menu" data-menu>
+  <div class="mega-menu__close">
+    <div class="mega-menu__logo-row">
+      <img class="mega-menu__logo" src="<?php echo get_template_directory_uri() ?>/images/holtehobby-logo-dark.svg" alt="Logo">
     </div>
+    <button class="mega-menu__close-button" data-menu-close>
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+      </svg>
+    </button>
+  </div>
+  <div class="container">
     <?php 
     wp_nav_menu( array(
       'theme_location' => 'mega-menu',
