@@ -1,6 +1,6 @@
 .breadcrumbs {
   padding: 0 1rem;
-  display: flex;
+  display: none;
   align-items: center;
   height: 3rem;
   margin: 1rem 0;
@@ -13,4 +13,10 @@
 
 .breadcrumbs a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .breadcrumbs {
+    display: flex;
+  }
 }
