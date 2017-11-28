@@ -130,7 +130,8 @@ html.overflow-hidden body {
     background-color: var(--dark-grey);
   }
 
-  .mega-menu__list > .menu-item.current-menu-ancestor a {
+  .mega-menu__list > .menu-item.current-menu-ancestor > a,
+  .mega-menu__list > .current-menu-item > a {
     background-color: var(--shade-grey);
   }
 
@@ -206,27 +207,3 @@ html.overflow-hidden body {
     justify-content: flex-start;
   }
 }
-
-/* @media (min-width: 576px) {
-  .mega-menu__list-item > .mega-menu__sub-list {
-    width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .mega-menu__list-item > .mega-menu__sub-list {
-    width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .mega-menu__list-item > .mega-menu__sub-list {
-    width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .mega-menu__list-item > .mega-menu__sub-list {
-    width: 1140px;
-  }
-} */
