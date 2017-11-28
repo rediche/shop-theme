@@ -82,6 +82,7 @@
     position: sticky;
     top: 2rem;
     height: auto;
+    z-index: 1;
   }
 
   .sidebar__close {
