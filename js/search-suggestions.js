@@ -61,6 +61,7 @@ function renderProducts (json) {
   // Hent template
   const SEARCH_TEMPLATE = document.querySelector('#search-result');
   const SEARCH_RESULTS = document.querySelector('[data-search-results]');
+  const MORE_BUTTON = document.querySelector('.search__more');
 
   // Loop gennem produkter
   json.forEach(function(product) {
@@ -77,10 +78,13 @@ function renderProducts (json) {
   });
   
   // Indsæt flere resultater knap
-  
+  MORE_BUTTON.classList.add('search__more--show');
 }
 
 function clearResults() {
   const SEARCH_RESULTS = document.querySelector('[data-search-results]');
   SEARCH_RESULTS.innerHTML = '';
+
+  const MORE_BUTTON = document.querySelector('.search__more');
+  MORE_BUTTON.classList.remove('search__more--show');
 }
