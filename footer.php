@@ -23,5 +23,12 @@
 </div>
 
 <?php wp_footer(); ?>
+
+<? // Brugt til search-suggestions.js ?>
+<script>
+  const BASE_URL = "<?php echo get_home_url(); ?>";
+</script>
+
+<?php get_template_part('partials/search', 'result'); ?>
 </body>
 </html>

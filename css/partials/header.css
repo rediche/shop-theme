@@ -38,28 +38,14 @@
   margin-top: -.5rem;
 }
 
-.middle-header__search {
-  margin-left: auto;
-  margin-right: 1rem;
-}
-
-.middle-header__search-toggle {}
-
-.middle-header__search-input {
-  display: none;
-  width: 100%;
-}
-
-.middle-header__menu-toggle-icon,
-.middle-header__search-icon {
+.middle-header__menu-toggle-icon {
   height: 1.5rem;
   width: 1.5rem;
   fill: var(--white);
   vertical-align: middle;
 }
 
-.middle-header__menu-toggle,
-.middle-header__search-toggle {
+.middle-header__menu-toggle {
   border: 0;
   background-color: transparent;
   padding: 0;
@@ -76,17 +62,7 @@
     margin-left: initial;
   }
 
-  .middle-header__menu-toggle,
-  .middle-header__search-toggle {
+  .middle-header__menu-toggle {
     display: none;
-  }
-
-  .middle-header__search {
-    flex: 1;
-    margin: 0 1rem 0 1.75rem;
-  }
-
-  .middle-header__search-input {
-    display: block;
   }
 }

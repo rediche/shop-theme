@@ -5,7 +5,8 @@
 
 .list__item {}
 
-.list__item a {
+.list__item a,
+a.list__item {
   color: var(--dark-grey);
   text-decoration: none;
   height: 2.5rem;
@@ -15,6 +16,8 @@
 }
 
 .list__item a:hover, 
-.list__item a:focus {
+.list__item a:focus,
+a.list__item:hover,
+a.list__item:focus {
   background-color: var(--lighter-grey);
 }
