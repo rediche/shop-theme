@@ -122,4 +122,22 @@ function get_category_max_price($category) {
 
 // WooCommerce disable going directly to product, if only 1 result.
 add_filter( 'woocommerce_redirect_single_search_result', '__return_false' );
+
+// Add price to search suggestions 
+add_action( 'rest_api_init', function () {
+
+  // Regular Price
+  register_rest_field( 'product', '_regular_price', array(
+    'get_callback' => function( $object ) {
+      return get_post_meta( $object[ 'id' ], '_regular_price', true );
+    }
+  ));
+
+  // Sale Price
+  register_rest_field( 'product', '_sale_price', array(
+    'get_callback' => function( $object ) {
+      return get_post_meta( $object[ 'id' ], '_sale_price', true );
+    }
+  ));
+} );
 ?>

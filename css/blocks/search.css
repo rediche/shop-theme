@@ -44,22 +44,29 @@
   border-top-right-radius: 0;
 }
 
-.search__result {}
+.search__result.list__item {
+  height: 3.5rem;
+}
 
 .search__result-image {
-  max-height: calc(100% - .5rem);
-  width: auto;
+  max-height: 32px;
+  max-width: 32px;
+  flex-basis: 32px;
   margin-right: .75rem;
+  flex: 0 0 auto;
 }
 
 .search__result-name {
   margin: 0;
+  line-height: 1;
+  padding-right: .5rem;
 }
 
 .search__result-price {
   margin-top: 0;
   margin-left: auto;
   font-weight: 700;
+  flex: 0 0 auto;
 }
 
 @media screen and (min-width: 768px) {
