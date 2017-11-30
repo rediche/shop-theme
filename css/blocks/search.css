@@ -81,8 +81,9 @@
   height: 3rem;
   align-items: center;
   justify-content: center;
-  background-color: var(--dark-grey);
-  color: var(--orange);
+  background-color: var(--orange);
+  color: var(--dark-grey);
+  cursor: pointer;
   text-decoration: none;
   border-bottom-left-radius: .125rem;
   border-bottom-right-radius: .125rem;
