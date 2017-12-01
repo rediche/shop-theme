@@ -1,11 +1,18 @@
 .product-card {
   margin-bottom: 2rem;
+  transition: .2s box-shadow;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-4dp);
 }
 
 .product-card__image {
   padding-top: 75%;
   background-position: center;
   background-size: cover;
+  border-top-left-radius: .125rem;
+  border-top-right-radius: .125rem;
 }
 
 .product-card__info {

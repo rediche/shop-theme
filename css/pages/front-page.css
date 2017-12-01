@@ -8,6 +8,11 @@
   position: relative;
   background-color: var(--dark-grey);
   margin-bottom: 1rem;
+  transition: .2s box-shadow;
+}
+
+.category-entry:hover {
+  box-shadow: var(--shadow-4dp);
 }
 
 .category-entry__inner {
