@@ -34,7 +34,6 @@ function initSearchSuggestions() {
     });
 
     MORE_RESULTS.addEventListener('click', function(event) {
-      console.log("click");
       SEARCH_FORM.submit();
     });
   }
