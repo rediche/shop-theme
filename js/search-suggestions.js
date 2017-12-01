@@ -46,8 +46,9 @@ function shouldRunSearch(value) {
 
 function runSearch(value) {
   const PRODUCTS_ENDPOINT = '/wp-json/wp/v2/product';
-
-  fetch(`${BASE_URL}${PRODUCTS_ENDPOINT}?search=${value}&_embed`).then(function(response) {
+  const MAX_PRODUCTS = 5;
+  
+  fetch(`${BASE_URL}${PRODUCTS_ENDPOINT}?search=${value}&_embed&per_page=${MAX_PRODUCTS}`).then(function(response) {
     return response.json();
   }).then(function(json) {
     renderProducts(json);
