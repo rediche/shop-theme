@@ -11,6 +11,7 @@
   z-index: 1;
   position: relative;
   border: 0;
+  padding-right: 2.5rem;
 }
 
 .search__input--has-results {
@@ -29,6 +30,24 @@
   border: 0;
   background-color: transparent;
   padding: 0;
+}
+
+.search__submit {
+  background-color: transparent;
+  border: 0;
+  color: var(--dark-grey);
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0.375rem 0;
+  width: 2.5rem;
+  height: 2.25rem;
+}
+
+.search__submit svg {
+  fill: currentColor;
 }
 
 .search__form {
