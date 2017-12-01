@@ -63,6 +63,7 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding-bottom: 0;
+  box-shadow: var(--shadow-4dp);
 }
 
 .search__results--open {
