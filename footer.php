@@ -5,9 +5,13 @@
         <h3 class="newsletter__heading">Tilmeld dig vores nyhedsbrev</h3>
         <p class="newsletter__description">Modtag de bedste tilbud først. Se når der kommer nye produkter på vores webshop og i vores butik. Bare rolig, vi spammer ikke.</p>
       </div>
-      <div class="col-xs-12 col-md-6 newsletter__form">
-        <input type="text" class="input input--raised newsletter__input" placeholder="Din email">
-        <button class="button button--raised newsletter__submit">Tilmeld</button>
+      <div class="col-xs-12 col-md-6">
+        <form class="newsletter__form">
+          <input type="email" class="input input--raised newsletter__input" placeholder="Din email">
+          <button class="button button--raised newsletter__submit">Tilmeld</button>
+          <p class="newsletter__thanks">Tak for tilmeldingen!</p>
+          <p class="newsletter__error">Fejl, indtast venligst en email.</p>
+        </form>
       </div>
     </div>
   </div>

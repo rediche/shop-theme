@@ -13,6 +13,7 @@
 
 .newsletter__form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .newsletter__input,
@@ -26,6 +27,22 @@
 
 .newsletter__submit {
   margin-left: .5rem;
+}
+
+.newsletter__thanks,
+.newsletter__error {
+  margin-top: .5rem;
+  display: none;
+  width: 100%;
+}
+
+.newsletter__error {
+  color: var(--error);
+}
+
+.newsletter__thanks--show,
+.newsletter__error--show {
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
