@@ -10,7 +10,7 @@ function initSearchSuggestions() {
   const TYPE_INTERVAL = 500;
   let typingTimer;
 
-  if (SEARCH_INPUT && SEARCH_RESULTS && MORE_RESULTS) {
+  if (SEARCH_INPUT && SEARCH_RESULTS && MORE_RESULTS && SEARCH_FORM) {
     // Når man har fokus på inputfeltet
     SEARCH_INPUT.addEventListener('click', function(event) {
       SEARCH_INPUT.classList.add('search__input--has-results');
