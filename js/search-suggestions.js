@@ -46,7 +46,7 @@ function shouldRunSearch(value) {
 
 function runSearch(value) {
   const PRODUCTS_ENDPOINT = '/wp-json/wp/v2/product';
-  const MAX_PRODUCTS = 5;
+  const MAX_PRODUCTS = 6;
   
   fetch(`${BASE_URL}${PRODUCTS_ENDPOINT}?search=${value}&_embed&per_page=${MAX_PRODUCTS}`).then(function(response) {
     return response.json();
@@ -62,23 +62,31 @@ function renderProducts (json) {
   const SEARCH_TEMPLATE = document.querySelector('#search-result');
   const SEARCH_RESULTS = document.querySelector('[data-search-results]');
   const MORE_BUTTON = document.querySelector('.search__more');
+  const NO_MORE_BUTTON = document.querySelector('.search__no-more');
 
   // Loop gennem produkter
-  json.forEach(function(product) {
-    const RESULT_MARKUP = SEARCH_TEMPLATE.content.cloneNode(true);
+  let forMax = json.length; // Loop igennem alle produkter.
+  if (json.length > 5) forMax = 5; // Hvis der er mere end 5 i json, så loop igennem max 5.
 
+  for (let i = 0; i < forMax; i++) {
+    const RESULT_MARKUP = SEARCH_TEMPLATE.content.cloneNode(true);
+    
     // Fyld data ind
-    RESULT_MARKUP.querySelector('.search__result').href = product.link; // Product URL
-    RESULT_MARKUP.querySelector('.search__result-image').src = product._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url; // Image URL
-    RESULT_MARKUP.querySelector('.search__result-name').innerHTML = product.title.rendered; // Title
-    RESULT_MARKUP.querySelector('.search__result-price').innerHTML = `${product._regular_price} DKK`; // Price
+    RESULT_MARKUP.querySelector('.search__result').href = json[i].link; // Product URL
+    RESULT_MARKUP.querySelector('.search__result-image').src = json[i]._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url; // Image URL
+    RESULT_MARKUP.querySelector('.search__result-name').innerHTML = json[i].title.rendered; // Title
+    RESULT_MARKUP.querySelector('.search__result-price').innerHTML = `${json[i]._regular_price} DKK`; // Price
 
     // Indsæt på resultatlisten
     SEARCH_RESULTS.appendChild(RESULT_MARKUP);
-  });
+  }
   
   // Indsæt flere resultater knap
-  MORE_BUTTON.classList.add('search__more--show');
+  if (json.length == 6) {
+    MORE_BUTTON.classList.add('search__more--show');
+  } else {
+    NO_MORE_BUTTON.classList.add('search__no-more--show');
+  }
 }
 
 function clearResults() {
@@ -87,4 +95,7 @@ function clearResults() {
 
   const MORE_BUTTON = document.querySelector('.search__more');
   MORE_BUTTON.classList.remove('search__more--show');
+
+  const NO_MORE_BUTTON = document.querySelector('.search__no-more');
+  NO_MORE_BUTTON.classList.remove('search__no-more--show');
 }

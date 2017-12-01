@@ -10,6 +10,7 @@
     <div class="search__results list card">
       <div data-search-results></div>
       <a class="search__more">Se flere resultater</a>
+      <span class="search__no-more">Ikke flere resultater</span>
     </div>
   </form>
 </div>
