@@ -27,6 +27,7 @@
 @import "blocks/coupon-form";
 @import "blocks/woocommerce-product-gallery";
 @import "blocks/woocommerce-form";
+@import "blocks/search";
 
 /* Partials */
 @import "partials/header";

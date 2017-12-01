@@ -1,0 +1,136 @@
+.search {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.search__toggle {}
+
+.search__input {
+  display: none;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  border: 0;
+  padding-right: 2.5rem;
+}
+
+.search__input--has-results {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search__icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--white);
+  vertical-align: middle;
+}
+
+.search__toggle {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+.search__submit {
+  background-color: transparent;
+  border: 0;
+  color: var(--dark-grey);
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0.375rem 0;
+  width: 2.5rem;
+  height: 2.25rem;
+}
+
+.search__submit svg {
+  fill: currentColor;
+}
+
+.search__form {
+  position: relative;
+  z-index: 9999999;
+}
+
+.search__results {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid var(--light-grey);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding-bottom: 0;
+}
+
+.search__results--open {
+  display: block;
+}
+
+.search__result.list__item {
+  height: 3.5rem;
+}
+
+.search__result-image {
+  max-height: 32px;
+  max-width: 32px;
+  flex-basis: 32px;
+  margin-right: .75rem;
+  flex: 0 0 auto;
+}
+
+.search__result-name {
+  margin: 0;
+  line-height: 1;
+  padding-right: .5rem;
+}
+
+.search__result-price {
+  margin-top: 0;
+  margin-left: auto;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+.search__more,
+.search__no-more {
+  margin-top: .5rem;
+  display: none;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+  color: var(--dark-grey);
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom-left-radius: .125rem;
+  border-bottom-right-radius: .125rem;
+}
+
+.search__more--show,
+.search__no-more--show {
+  display: flex;
+}
+
+.search__no-more {
+  background-color: transparent;
+  color: var(--dark-grey);
+  font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+  .search__toggle {
+    display: none;
+  }
+
+  .search {
+    flex: 1;
+    margin: 0 1rem 0 1.75rem;
+  }
+
+  .search__input {
+    display: block;
+  }
+}
