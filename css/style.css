@@ -32,6 +32,7 @@
 /* Partials */
 @import "partials/header";
 @import "partials/footer";
+@import "partials/newsletter";
 
 /* Pages */
 @import "pages/front-page";

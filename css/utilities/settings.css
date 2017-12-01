@@ -9,6 +9,7 @@ This property can then be used as: var(--custom-property) and will be resolved t
   --medium-grey: #546E7A;
   --lighter-grey: #FAFAFA;
   --light-grey: #E7E7E7;
+  --light-blue-grey: #ECEFF1;
   --white: #FFFFFF;
   --success: #4CAF50;
   --error: #F44336;
