@@ -7,7 +7,7 @@ function initSearchSuggestions() {
   const SEARCH_INPUT = document.querySelector('[data-search-input]');
   const SEARCH_RESULTS = document.querySelector('.search__results');
   const MORE_RESULTS = document.querySelector('.search__more');
-  const TYPE_INTERVAL = 500;
+  const TYPE_INTERVAL = 200;
   let typingTimer;
 
   if (SEARCH_INPUT && SEARCH_RESULTS && MORE_RESULTS && SEARCH_FORM) {
