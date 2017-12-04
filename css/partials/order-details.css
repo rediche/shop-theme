@@ -1,0 +1,46 @@
+.order-details {}
+
+.order-details__title,
+.wc-bacs-bank-details-heading {
+  font-size: 1.414rem;
+  margin-top: 1rem;
+}
+
+/* Inheritance... #€"#)(€ */
+.woocommerce .woocommerce-customer-details address {
+  border: 0;
+  line-height: 1.25;
+  border-radius: .125rem;
+}
+
+.woocommerce .woocommerce-customer-details address p {
+  margin-top: 0;
+}
+
+.woocommerce .wc-bacs-bank-details-account-name {
+  margin-bottom: .5rem;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.woocommerce-thankyou-order-received {
+  background-color: var(--white);
+  border-radius: .125rem;
+  box-shadow: var(--shadow-2dp);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  background-color: var(--success);
+  color: var(--white);
+}
+
+.woocommerce ul.order_details {
+  margin-bottom: 1rem;
+}
+
+.woocommerce ul.order_details li {
+  margin-bottom: 1rem;
+}
