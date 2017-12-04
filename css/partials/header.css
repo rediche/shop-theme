@@ -51,6 +51,11 @@
   padding: 0;
 }
 
+.middle-header__menu-toggle--hide,
+.middle-header__logo--hide {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .top-header {
     display: flex;
