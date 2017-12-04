@@ -103,7 +103,9 @@
 }
 
 .search__result.list__item {
-  height: 3.5rem;
+  min-height: 3.5rem;
+  padding: .75rem;
+  flex-wrap: wrap;
 }
 
 .search__result-image {
@@ -117,7 +119,8 @@
 .search__result-name {
   margin: 0;
   line-height: 1;
-  padding-right: .5rem;
+  width: calc(100% - 32px - 1rem);
+  padding: 0;
 }
 
 .search__result-price {
@@ -179,5 +182,10 @@
 
   .search__input {
     display: block;
+  }
+
+  .search__result-name {
+    padding-right: .5rem;
+    width: auto;
   }
 }

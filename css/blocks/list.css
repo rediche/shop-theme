@@ -9,7 +9,7 @@
 a.list__item {
   color: var(--dark-grey);
   text-decoration: none;
-  height: 2.5rem;
+  min-height: 2.5rem;
   display: flex;
   align-items: center;
   padding: 0 .75rem;
