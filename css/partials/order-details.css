@@ -44,3 +44,17 @@
 .woocommerce ul.order_details li {
   margin-bottom: 1rem;
 }
+
+.woocommerce-table--order-details {
+  font-size: .85rem;
+}
+
+.woocommerce-table--order-details td {
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .woocommerce-table--order-details {
+    font-size: 1rem;
+  }
+}
