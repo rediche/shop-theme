@@ -28,6 +28,7 @@
 @import "blocks/woocommerce-product-gallery";
 @import "blocks/woocommerce-form";
 @import "blocks/search";
+@import "blocks/stock";
 
 /* Partials */
 @import "partials/header";
