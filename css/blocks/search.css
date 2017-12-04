@@ -44,6 +44,7 @@
   padding: 0.375rem 0;
   width: 2.5rem;
   height: 2.25rem;
+  display: none;
 }
 
 .search__submit svg {
@@ -125,6 +126,10 @@
 @media screen and (min-width: 768px) {
   .search__toggle {
     display: none;
+  }
+
+  .search__submit {
+    display: block;
   }
 
   .search {
