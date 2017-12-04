@@ -1,0 +1,12 @@
+.stock {
+  margin-top: 0;
+  font-size: .75rem;
+  text-transform: uppercase;
+  color: var(--success);
+}
+
+.stock__outofstock {
+  margin-top: 1rem;
+  font-size: .85rem;
+  color: var(--error);
+}

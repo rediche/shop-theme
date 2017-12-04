@@ -25,7 +25,7 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 
-echo wc_get_stock_html( $product );
+//echo wc_get_stock_html( $product );
 
 if ( $product->is_in_stock() ) : ?>
 
@@ -70,3 +70,11 @@ if ( $product->is_in_stock() ) : ?>
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>
+
+<?php 
+if ( $product->is_in_stock() ) {
+  ?><p class="stock">På lager</p><?php
+} else {
+  ?><p class="stock stock__outofstock">Ikke på lager</p><?php
+}
+?>
