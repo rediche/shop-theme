@@ -19,7 +19,7 @@
 }
 
 .store-section__content {
-  padding: 0 1rem;
+  padding: 0 1.4rem;
   margin-bottom: 1.5rem;
 }
 
@@ -93,7 +93,7 @@
     border-top-left-radius: .125rem;
     border-bottom-left-radius: .125rem;
   }
-  l .store-section__heading {
+  .store-section__heading {
     margin-top: 1.15rem;
   }
   .store-section__content {
