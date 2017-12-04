@@ -101,17 +101,19 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card">
+        <div class="card store-section">
           <div class="row">
             <div class="col-sm-12 col-md-6">
-              <img src="<?php echo get_template_directory_uri() ?>/images/frontpage-store.jpg" alt="">
+              <img class="store-section__image" src="<?php echo get_template_directory_uri() ?>/images/frontpage-store.jpg" alt="">
             </div>
             <div class="col-sm-12 col-md-6">
-              <h2>Besøg vores butik i Holte</h2>
-              <p>Kom og besøg Holte Hobby i Holte. Vi har en butik på 300 kvm med produkter i massevis. Vi står altid klar til at hjælpe med hvad du har brug for - om det gælder reparation af ødelagt udstyr, hjælp til køb af en vare eller noget helt tredje - bare spørg.</p>
-              <a href="">
-                <p>Find os her</p>
-              </a>
+              <div class="store-section__content">
+                <h1 class="store-section__heading">Besøg Holte Hobby</h1>
+                <p class="store-section__body">Kom og besøg Holte Hobby i Holte. Vi har en butik på 300 kvm med produkter i massevis. Vi står altid klar til at hjælpe med hvad du har brug for - om det gælder reparation af ødelagt udstyr, hjælp til køb af en vare eller noget helt tredje - bare spørg.</p>
+                <a href="">
+                  <p>Find os her</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
