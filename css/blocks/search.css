@@ -160,6 +160,7 @@
 @media screen and (min-width: 768px) {
   .search__form {
     display: block; 
+    z-index: 2;
   }
 
   .search__toggle {

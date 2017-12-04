@@ -16,7 +16,7 @@ html.overflow-hidden body {
   max-width: 18rem;
   transform: translateX(calc(-100% - 1rem));
   transition: .3s transform;
-  z-index: 999999; /* Overwrite WP Admin Bar Z-index */
+  z-index: 9999999; /* Overwrite WP Admin Bar Z-index */
 }
 
 .mega-menu--open {
@@ -92,6 +92,7 @@ html.overflow-hidden body {
     position: relative;
     width: auto;
     max-width: none;
+    z-index: 1;
   }
 
   .mega-menu__close {
