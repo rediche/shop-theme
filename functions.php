@@ -6,6 +6,7 @@ function hh_setup_styles_and_scripts() {
   wp_enqueue_script( 'burger-menu', get_stylesheet_directory_uri().'/js/burger-menu.js' );
   wp_enqueue_script( 'sidebar', get_stylesheet_directory_uri().'/js/sidebar.js' );
   wp_enqueue_script( 'search-suggestions', get_stylesheet_directory_uri().'/js/search-suggestions.js' );
+  wp_enqueue_script( 'search-toggle', get_stylesheet_directory_uri().'/js/search-toggle.js' );
   wp_enqueue_script( 'newsletter', get_stylesheet_directory_uri().'/js/newsletter.js' );
 }
 add_action( 'wp_enqueue_scripts', 'hh_setup_styles_and_scripts' );
