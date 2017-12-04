@@ -12,14 +12,14 @@
       $cta_images[2] = 'i-luften.jpg';
       foreach ($cta_menu_items as $key => $item) :
       ?>
-      <div class="col-sm-12 col-md-4">
-        <a class="card category-entry" href="<?php echo $item->url; ?>">
+        <div class="col-sm-12 col-md-4">
+          <a class="card category-entry" href="<?php echo $item->url; ?>">
           <div class="category-entry__inner" style="background-image:url('<?php echo get_template_directory_uri() ?>/images/categories/<?php echo $cta_images[$key]; ?>');">
             <h2><?php echo $item->title; ?></h2>
           </div>
         </a>
-      </div>
-      <?php
+        </div>
+        <?php
       endforeach;
       ?>
     </div>
@@ -46,9 +46,13 @@
         $loop = new WP_Query( $sale_args );
         if ( $loop->have_posts() ) {
           while ( $loop->have_posts() ) : $loop->the_post();
-            ?><div class="col-sm-6 col-md-3"><?php
+            ?>
+        <div class="col-sm-6 col-md-3">
+          <?php
             wc_get_template_part( 'content', 'product' );
-            ?></div><?php
+            ?>
+        </div>
+        <?php
           endwhile;
         } else {
           echo __( 'Ingen produkter fundet' );
@@ -78,15 +82,40 @@
         $loop = new WP_Query( $sale_args );
         if ( $loop->have_posts() ) {
           while ( $loop->have_posts() ) : $loop->the_post();
-            ?><div class="col-sm-6 col-md-3"><?php
+            ?>
+        <div class="col-sm-6 col-md-3">
+          <?php
             wc_get_template_part( 'content', 'product' );
-            ?></div><?php
+            ?>
+        </div>
+        <?php
           endwhile;
         } else {
           echo __( 'Ingen produkter fundet' );
         }
         wp_reset_postdata();
       ?>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card store-section">
+          <div class="row">
+            <div class="col-sm-12 col-lg-6">
+              <img class="store-section__image" src="<?php echo get_template_directory_uri() ?>/images/frontpage-store.jpg" alt="">
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="store-section__content">
+                <h1 class="store-section__heading">Besøg Holte Hobby</h1>
+                <p class="store-section__body">Kom og besøg Holte Hobby i Holte. Vi har en butik på 300 kvm med produkter i massevis. Vi står altid klar til at hjælpe med hvad du har brug for - om det gælder reparation af ødelagt udstyr, hjælp til køb af en vare eller noget helt tredje - bare spørg.</p>
+                <button class="button store-section__button">Besøg vores butik</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
