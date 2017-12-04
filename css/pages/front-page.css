@@ -2,10 +2,9 @@
   margin: 1rem 0 0;
 }
 
-/*
 .store-section {
+  margin-bottom: 2rem;
 }
-*/
 
 .store-section .store-section__image:only-child {
   border-bottom-left-radius: 0;
@@ -26,6 +25,16 @@
 
 .store-section__body {
   margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.store-section__button {
+  background-color: #273238;
+  color: white;
+}
+
+.store-section__button:focus {
+  background-color: #273238bf;
 }
 
 .category-entry {
@@ -64,6 +73,9 @@
 @media screen and (min-width: 768px) {
   .front-page {
     margin: 2rem 0;
+  }
+  .store-section {
+    margin-bottom: 0;
   }
   .store-section .store-section__image:only-child {
     border-top-right-radius: 0;
