@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
   initSearchSuggestions();
 });
 
+let lastTimestamp;
+
 function initSearchSuggestions() {
   const SEARCH_FORM = document.querySelector('.search__form');
   const SEARCH_INPUT = document.querySelector('[data-search-input]');
@@ -41,17 +43,19 @@ function initSearchSuggestions() {
 
 function shouldRunSearch(value) {
   clearResults(); // Clear current results
-  if (value) runSearch(value); // Only run search if value is set
+  let timestamp = performance.now(); // Get current time
+  lastTimestamp = timestamp; 
+  if (value) runSearch(value, timestamp); // Only run search if value is set
 }
 
-function runSearch(value) {
+function runSearch(value, timestamp) {
   const PRODUCTS_ENDPOINT = '/wp-json/wp/v2/product';
   const MAX_PRODUCTS = 6;
   
   fetch(`${BASE_URL}${PRODUCTS_ENDPOINT}?search=${value}&_embed&per_page=${MAX_PRODUCTS}`).then(function(response) {
     return response.json();
   }).then(function(json) {
-    renderProducts(json);
+    if (timestamp == lastTimestamp) renderProducts(json); // Only run renderProducts() if timestamp and lastTimestamp is the same.
   });
 } 
 
