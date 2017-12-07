@@ -1,3 +1,4 @@
+<?php if (!is_cart() && !is_checkout()) : ?>
 <div class="newsletter">
   <div class="container">
     <div class="row align-items-center">
@@ -16,6 +17,7 @@
     </div>
   </div>
 </div>
+<?php endif; ?>
 
 <div class="footer">
   <div class="container">
