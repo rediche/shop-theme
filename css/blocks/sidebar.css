@@ -10,7 +10,7 @@
   transition: .3s transform;
   box-shadow: var(--shadow-2dp);
   padding: .5rem 0 1rem;
-  z-index: 999999;
+  z-index: 9999999;
 }
 
 .sidebar--open {
