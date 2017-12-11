@@ -30,7 +30,21 @@
       <div class="col-sm-12">
         <div class="product-section__header">
           <h2 class="product-section__title">Nuværende tilbud</h2>
-          <a href="#" class="product-section__see-more">Se flere</a>
+          <?php
+            // Find side ID på sider med page template: "on-sale.php". 
+            $sale_page_args = array(
+              'post_type' => 'page',
+              'fields' => 'ids',
+              'nopaging' => true,
+              'meta_key' => '_wp_page_template',
+              'meta_value' => 'on-sale.php'
+            );
+            $pages = get_posts( $sale_page_args );
+            if (isset($pages[0]) && !empty($pages[0])) {
+              ?><a href="<?php echo get_permalink($pages[0]); ?>" class="product-section__see-more">Se flere</a><?php
+            }
+          ?>
+          
         </div>
       </div>
 
