@@ -33,6 +33,7 @@
 .newsletter__thanks,
 .newsletter__error {
   margin-top: .5rem;
+  margin-bottom: 0;
   display: none;
   width: 100%;
 }
