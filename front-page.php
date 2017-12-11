@@ -81,7 +81,7 @@
       <div class="col-sm-12">
         <div class="product-section__header">
           <h2 class="product-section__title">Nye produkter</h2>
-          <a href="#" class="product-section__see-more">Se flere</a>
+          <a href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>" class="product-section__see-more">Se flere</a>
         </div>
       </div>
 
