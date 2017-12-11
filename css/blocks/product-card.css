@@ -1,6 +1,7 @@
 .product-card {
   margin-bottom: 2rem;
   transition: .2s box-shadow;
+  height: calc(100% - 2rem);
 }
 
 .product-card:hover {
@@ -16,8 +17,8 @@
 }
 
 .product-card__info {
-  height: 4rem;
-  padding: 0 1rem;
+  min-height: 4rem;
+  padding: .75rem 1rem;
   display: flex;
   flex-direction: column;
   font-weight: 300;
@@ -28,7 +29,7 @@
 .product-card__title,
 .woocommerce-loop-product__title{
   font-size: 1.25rem;
-  line-height: 1;
+  line-height: 1.14;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -41,21 +42,34 @@
 
 .product-card__price .price {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: flex-end;
   align-content: flex-end;
+  font-weight: 700;
+  font-size: .875rem;
+  margin-top: .25rem;
+  line-height: 1.25;
 }
 
-.product-card__price del {
-  font-size: .85rem;
-}
-
-.product-card__price ins {
+.product-card__price .price del {
   text-decoration: none;
-  font-weight: 500;
+}
+
+.product-card__price .price del .amount {
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.product-card__price .price ins {
+  text-decoration: none;
+}
+
+.product-card__price .price ins .amount {
   margin-right: .5rem;
 }
 
 .woocommerce-loop-product__link {
   text-decoration: none;
+  display: block;
+  height: 100%;
 }
