@@ -1,9 +1,6 @@
 // Don't do stuff until DOMContentLoaded happens.
 document.addEventListener("DOMContentLoaded", function(event) { 
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
-
-  // Only run stuff, if we're on mobile devices
-  if (mediaQuery.matches) enableBurgerMenuToggle();
+  enableBurgerMenuToggle();
 });
 
 function enableBurgerMenuToggle() {
@@ -12,19 +9,24 @@ function enableBurgerMenuToggle() {
   const burgerMenu = document.querySelector('[data-menu]');
   const html = document.querySelector('html');
 
+  // Only run stuff, if we're on mobile devices
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+
   if (!burgerMenuToggle || !burgerMenuClose || !burgerMenu) return;
 
   burgerMenuToggle.addEventListener('click', function() {
     burgerMenu.classList.toggle('mega-menu--open');
-    html.classList.toggle('overflow-hidden');
+    if (mediaQuery.matches) html.classList.toggle('overflow-hidden');
   });
 
   burgerMenuClose.addEventListener('click', function() {
     burgerMenu.classList.remove('mega-menu--open');
-    html.classList.remove('overflow-hidden');
+    if (mediaQuery.matches) html.classList.remove('overflow-hidden');
   });
 
-  enableMenuToggles();
+  
+  
+  if (mediaQuery.matches) enableMenuToggles();
 }
 
 // Get all menu items with children on the top level

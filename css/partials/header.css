@@ -1,6 +1,7 @@
 .header {
   background-color: var(--dark-grey);
   color: var(--white);
+  box-shadow: var(--shadow-2dp);
 }
 
 .top-header {
@@ -65,9 +66,5 @@
     width: 220px;
     margin-top: -1rem;
     margin-left: initial;
-  }
-
-  .middle-header__menu-toggle {
-    display: none;
   }
 }

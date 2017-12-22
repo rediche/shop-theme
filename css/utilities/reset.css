@@ -23,6 +23,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html, body {
+	position: relative;
+}
 body {
 	font-family: system-ui;
 	background-color: var(--lighter-grey);
