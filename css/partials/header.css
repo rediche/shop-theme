@@ -68,3 +68,9 @@
     margin-left: initial;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .middle-header__menu-toggle {
+    margin-right: 1rem;
+  }
+}
