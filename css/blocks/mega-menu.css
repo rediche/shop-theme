@@ -117,6 +117,8 @@ html.overflow-hidden body {
 
   .mega-menu__list {
     margin: 0;
+    border-bottom-left-radius: .125rem;
+    border-bottom-right-radius: .125rem;
   }
 
   .mega-menu__container > .row > .mega-menu__list {
@@ -147,7 +149,7 @@ html.overflow-hidden body {
 
   .mega-menu__list > .menu-item.current-menu-ancestor > a,
   .mega-menu__list > .current-menu-item > a {
-    background-color: var(--shade-grey);
+    border-right: .25rem solid var(--medium-grey);
   }
 
   .mega-menu__list .menu-item > .sub-menu {
@@ -168,6 +170,7 @@ html.overflow-hidden body {
   .mega-menu__list .menu-item:hover > .sub-menu {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
   }
 
   .mega-menu__list .menu-item > .sub-menu > .menu-item {
@@ -182,11 +185,16 @@ html.overflow-hidden body {
     padding: 0 1rem;
     justify-content: flex-start;
     min-height: 2rem;
+    height: auto;
   }
 
   .mega-menu__list .menu-item > .sub-menu .menu-item a:hover {
     text-decoration: underline;
     background-color: initial;
+  }
+
+  .mega-menu__list > .menu-item > .sub-menu > .menu-item > a {
+    margin-top: .5rem;
   }
 
   .mega-menu__list .menu-item > .sub-menu .sub-menu {
@@ -214,8 +222,16 @@ html.overflow-hidden body {
 }
 
 @media (min-width: 1200px) {
+  .mega-menu {
+    width: calc(1140px - 30px);
+  }
+
   .mega-menu__list {
     justify-content: flex-start;
+  }
+
+  .mega-menu__list .menu-item > .sub-menu {
+    width: calc(1140px - 30px - 200px);
   }
 
   .mega-menu__list .menu-item > .sub-menu > .menu-item {

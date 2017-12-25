@@ -50,6 +50,13 @@
   border: 0;
   background-color: transparent;
   padding: 0;
+  font-size: .85rem;
+  color: var(--white);
+  margin-right: 2rem;
+}
+
+.middle-header__menu-toggle span {
+  display: none;
 }
 
 .middle-header__menu-toggle--hide,
@@ -63,14 +70,12 @@
   }
 
   .middle-header__logo img {
-    width: 220px;
-    margin-top: -1rem;
     margin-left: initial;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .middle-header__menu-toggle {
-    margin-right: 1rem;
+  .middle-header__menu-toggle span {
+    display: inline;
   }
 }
