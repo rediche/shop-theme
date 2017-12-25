@@ -53,6 +53,7 @@
   font-size: .85rem;
   color: var(--white);
   margin-right: 2rem;
+  height: calc(100% - 1rem);
 }
 
 .middle-header__menu-toggle span {
