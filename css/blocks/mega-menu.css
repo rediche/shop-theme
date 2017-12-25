@@ -123,12 +123,8 @@ html.overflow-hidden body {
 
   .mega-menu__container > .row > .mega-menu__list {
     background-color: var(--white);
-    box-shadow: var(--shadow-2dp);
+    box-shadow: var(--shadow-4dp);
     max-width: 200px;
-  }
-
-  .mega-menu__list > .menu-item {
-    /* max-width: 33%; */
   }
 
   .mega-menu__list > .menu-item:last-child {
