@@ -173,6 +173,10 @@ html.overflow-hidden body {
     padding: 0;
   }
 
+  .mega-menu__list > .menu-item:hover > .sub-menu {
+    min-height: 100%;
+  }
+
   .mega-menu__list .menu-item > .sub-menu > .menu-item {
     flex: 1;
     flex-basis: calc((100% / 3) - .5rem);
